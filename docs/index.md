@@ -11,3 +11,4 @@
 ## 技術情報
 - このサイトはGitHub Pagesで作成され、ドメインはCloudflare Registerで取得しています
 - GitHubリポジトリは https://github.com/Kisaraki2021/OTH-Information-I にあります
+- 記事は全てMarkdownで記載されています
