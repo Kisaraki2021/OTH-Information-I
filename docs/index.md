@@ -19,7 +19,7 @@
   ![map-official](https://www.expo2025.or.jp/wp/wp-content/themes/expo2025orjp_2022/assets/img/expo-map-index/map/img01.jpg)
 
 - 非公式地図(つじ氏([Twitter@t_tsuji](https://x.com/t_tsuji))作)
-  ![map-unofficial-tsuji](https://pbs.twimg.com/media/GqbYHElXQAAFGS2?format=jpg&name=4096x4096)
+  [ダウンロードリンク](https://drive.google.com/file/d/1P5LPD2syG0-iockXNvw-qZfA9-6Jt1Lu/view)
 
 - 乗換案内サイト(時間・行先入力済み)
   [Yahoo乗換案内](https://transit.yahoo.co.jp/?from=&to=%E5%A4%A2%E6%B4%B2&fromgid=&togid=&flatlon=&tlatlon=&via=&viacode=&y=2025&m=05&d=21&hh=09&m1=3&m2=0&type=4&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0)
