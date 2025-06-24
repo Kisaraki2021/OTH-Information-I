@@ -87,8 +87,6 @@
 - 論理回路の入力と出力の関係表を真理値表という
 
 ### AND（論理積）
-![alt text](image.png)
-
 | A | B | A AND B |
 |---|---|----------|
 | 0 | 0 |    0     |
@@ -96,9 +94,9 @@
 | 1 | 0 |    0     |
 | 1 | 1 |    1     |
 
-### OR（論理和）
-![alt text](image-1.png)
+![alt text](image.png)
 
+### OR（論理和）
 | A | B | A OR B |
 |---|---|---------|
 | 0 | 0 |   0     |
@@ -106,17 +104,17 @@
 | 1 | 0 |   1     |
 | 1 | 1 |   1     |
 
-### NOT（否定）
-![alt text](image-2.png)
+![alt text](image-1.png)
 
+### NOT（否定）
 | A | NOT A |
 |---|--------|
 | 0 |   1    |
 | 1 |   0    |
 
-### NAND（否定論理積）
-![alt text](image-4.png)
+![alt text](image-2.png)
 
+### NAND（否定論理積）
 | A | B | A NAND B |
 |---|---|-----------|
 | 0 | 0 |     1     |
@@ -124,9 +122,9 @@
 | 1 | 0 |     1     |
 | 1 | 1 |     0     |
 
-### NOR（否定論理和）
+![alt text](image-4.png)
 
-![alt text](image-3.png)
+### NOR（否定論理和）
 | A | B | A NOR B |
 |---|---|----------|
 | 0 | 0 |    1     |
@@ -134,15 +132,17 @@
 | 1 | 0 |    0     |
 | 1 | 1 |    0     |
 
-### XOR（排他的論理和）
-![alt text](image-5.png)
+![alt text](image-3.png)
 
+### XOR（排他的論理和）
 | A | B | A XOR B |
 |---|---|----------|
 | 0 | 0 |    0     |
 | 0 | 1 |    1     |
 | 1 | 0 |    1     |
 | 1 | 1 |    0     |
+
+![alt text](image-5.png)
 
 # 10. デジタル情報の特徴
 ## Point
