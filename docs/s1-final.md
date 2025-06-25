@@ -94,7 +94,7 @@
 | 1 | 0 |    0     |
 | 1 | 1 |    1     |
 
-![alt text](image.png)
+![alt text](resource/AND.png)
 
 ### OR（論理和）
 | A | B | A OR B |
@@ -104,7 +104,7 @@
 | 1 | 0 |   1     |
 | 1 | 1 |   1     |
 
-![alt text](image-1.png)
+![alt text](resource/OR.png)
 
 ### NOT（否定）
 | A | NOT A |
@@ -112,7 +112,7 @@
 | 0 |   1    |
 | 1 |   0    |
 
-![alt text](image-2.png)
+![alt text](resource/NOT.png)
 
 ### NAND（否定論理積）
 | A | B | A NAND B |
@@ -122,7 +122,7 @@
 | 1 | 0 |     1     |
 | 1 | 1 |     0     |
 
-![alt text](image-4.png)
+![alt text](resource/NAND.png)
 
 ### NOR（否定論理和）
 | A | B | A NOR B |
@@ -132,7 +132,7 @@
 | 1 | 0 |    0     |
 | 1 | 1 |    0     |
 
-![alt text](image-3.png)
+![alt text](resource/NOR.png)
 
 ### XOR（排他的論理和）
 | A | B | A XOR B |
@@ -142,7 +142,7 @@
 | 1 | 0 |    1     |
 | 1 | 1 |    0     |
 
-![alt text](image-5.png)
+![alt text](resource/XOR.png)
 
 # 10. デジタル情報の特徴
 ## Point
