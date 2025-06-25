@@ -90,7 +90,7 @@
     border-collapse: collapse;
     }
     #bit_table td {
-        width: 20px;
+        width: 10px;
         color: black;
     }
     #bit_table .light-blue {
