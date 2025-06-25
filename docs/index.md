@@ -8,6 +8,7 @@
 - [1学期中間](./s1-middle)
 - [1学期中間(印刷用)](./s1-middle-printout)
 - [1学期期末](./s1-final)
+- [1学期期末(印刷用)](./s1-final-printout.md)
 
 ## 技術情報
 - このサイトはGitHub Pagesで作成され、ドメインはCloudflare Registerで取得しています
