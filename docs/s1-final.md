@@ -75,6 +75,54 @@
         - 符号部 S : 符号(+, -)を表す
         - 指数部 E : 小数点の位置を表す
         - 仮数部 M : 実際の数字を表す 
+        - (-1)<sup>s</sup> × 1.M × 2<sup>E-127</sup>
+        - 実際の計算
+            1. 与えられた10進数を2進数に変換
+            2. 上の浮動小数点数の式の形に変形
+                - この時、指数部はE-127の形にすることに注意
+            3. 
+
+<style>
+  td {
+    color: black;
+  }
+  .light-blue {
+    background-color: #d6e6f8;
+  }
+  .blue {
+    background-color: #a1c2f2;
+  }
+  .light-orange {
+    background-color: #f7d6be;
+  }
+  
+</style>
+<table>
+  <tr>
+    <td class="light-blue">0</td>
+    <td class="blue">0</td>
+    <td class="blue">0</td>
+    <td class="blue">0</td>
+    <td class="blue">0</td>
+    <td class="blue">0</td>
+    <td class="blue">0</td>
+    <td class="blue">0</td>
+    <td class="blue">0</td>
+    <td class="blue">0</td>
+    <td class="light-orange">0</td>
+    <td class="light-orange">0</td>
+    <td class="light-orange">0</td>
+    <td class="light-orange">0</td>
+    <td class="light-orange">0</td>
+    <td class="light-orange">0</td>
+    <td class="light-orange">0</td>
+    <td class="light-orange">0</td>
+    <td class="light-orange">0</td>
+    <td class="light-orange">0</td>
+    <td class="light-orange">0</td>
+    <td class="light-orange">0</td>
+  </tr>
+</table>
 
 # プリント (論理回路)
 - コンピューターは0と1の2種類の信号で処理をする
@@ -109,7 +157,7 @@
 
 <img src="./resource/OR.png" width="50%">
 
-### NOT（否定）
+### NOT（否定）₮
 - 入力を反転（0→1、1→0）
 
 | A | NOT A |
