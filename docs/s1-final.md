@@ -84,61 +84,61 @@
             4. S、E、Mを順に下の表に書く
                 - Mは左詰めにし、余ったところは0を書く
 
-<table>
-<style>
-#bit-table {
-border-collapse: collapse;
-}
-#bit_table td {
-    width: 20px;
-    color: black;
-}
-#bit_table .light-blue {
-    background-color: #d6e6f8;
-}
-#bit_table .blue {
-    background-color: #a1c2f2;
-}
-#bit_table .light-orange {
-    background-color: #f7d6be;
-}
-</style>
-<table id=bit_table>
-<tr>
-    <td class="light-blue">0</td>
-    <td class="blue">0</td>
-    <td class="blue">0</td>
-    <td class="blue">0</td>
-    <td class="blue">0</td>
-    <td class="blue">0</td>
-    <td class="blue">0</td>
-    <td class="blue">0</td>
-    <td class="blue">0</td>
-    <td class="light-orange">0</td>
-    <td class="light-orange">0</td>
-    <td class="light-orange">0</td>
-    <td class="light-orange">0</td>
-    <td class="light-orange">0</td>
-    <td class="light-orange">0</td>
-    <td class="light-orange">0</td>
-    <td class="light-orange">0</td>
-    <td class="light-orange">0</td>
-    <td class="light-orange">0</td>
-    <td class="light-orange">0</td>
-    <td class="light-orange">0</td>
-    <td class="light-orange">0</td>
-    <td class="light-orange">0</td>
-    <td class="light-orange">0</td>
-    <td class="light-orange">0</td>
-    <td class="light-orange">0</td>
-    <td class="light-orange">0</td>
-    <td class="light-orange">0</td>
-    <td class="light-orange">0</td>
-    <td class="light-orange">0</td>
-    <td class="light-orange">0</td>
-    <td class="light-orange">0</td>
-</tr>
-</table>
+    <table>
+    <style>
+    #bit-table {
+    border-collapse: collapse;
+    }
+    #bit_table td {
+        width: 20px;
+        color: black;
+    }
+    #bit_table .light-blue {
+        background-color: #d6e6f8;
+    }
+    #bit_table .blue {
+        background-color: #a1c2f2;
+    }
+    #bit_table .light-orange {
+        background-color: #f7d6be;
+    }
+    </style>
+    <table id=bit_table>
+    <tr>
+        <td class="light-blue">0</td>
+        <td class="blue">0</td>
+        <td class="blue">0</td>
+        <td class="blue">0</td>
+        <td class="blue">0</td>
+        <td class="blue">0</td>
+        <td class="blue">0</td>
+        <td class="blue">0</td>
+        <td class="blue">0</td>
+        <td class="light-orange">0</td>
+        <td class="light-orange">0</td>
+        <td class="light-orange">0</td>
+        <td class="light-orange">0</td>
+        <td class="light-orange">0</td>
+        <td class="light-orange">0</td>
+        <td class="light-orange">0</td>
+        <td class="light-orange">0</td>
+        <td class="light-orange">0</td>
+        <td class="light-orange">0</td>
+        <td class="light-orange">0</td>
+        <td class="light-orange">0</td>
+        <td class="light-orange">0</td>
+        <td class="light-orange">0</td>
+        <td class="light-orange">0</td>
+        <td class="light-orange">0</td>
+        <td class="light-orange">0</td>
+        <td class="light-orange">0</td>
+        <td class="light-orange">0</td>
+        <td class="light-orange">0</td>
+        <td class="light-orange">0</td>
+        <td class="light-orange">0</td>
+        <td class="light-orange">0</td>
+    </tr>
+    </table>
 
 
 # プリント (論理回路)
