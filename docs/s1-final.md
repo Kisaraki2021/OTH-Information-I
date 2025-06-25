@@ -94,7 +94,7 @@
 | 1 | 0 |    0     |
 | 1 | 1 |    1     |
 
-![alt text](resource/AND.png)
+<img src="resource/AND.jpg" width="50%">
 
 ### OR（論理和）
 | A | B | A OR B |
