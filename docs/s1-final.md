@@ -137,7 +137,6 @@ border-collapse: collapse;
     <td class="light-orange">0</td>
     <td class="light-orange">0</td>
     <td class="light-orange">0</td>
-    
 </tr>
 </table>
 
