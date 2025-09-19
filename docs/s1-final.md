@@ -91,7 +91,7 @@
             4. S(1桁)、E(8桁)、M(23桁)を順に下の表に書く
                 - Mは左詰めにし、余ったところは0を書く
 
-![alt text](resource/bit_table.png)
+![alt text](resources/bit_table.png)
 
 
 # プリント (論理回路)
@@ -113,7 +113,7 @@
 | 1 | 0 |    0     |
 | 1 | 1 |    1     |
 
-<img src="./resource/AND.png" width="50%">
+<img src="./resources/AND.png" width="50%">
 
 ### OR（論理和）
 - 片方でも1なら1を出力
@@ -125,7 +125,7 @@
 | 1 | 0 |   1     |
 | 1 | 1 |   1     |
 
-<img src="./resource/OR.png" width="50%">
+<img src="./resources/OR.png" width="50%">
 
 ### NOT（否定）
 - 入力を反転（0→1、1→0）
@@ -135,7 +135,7 @@
 | 0 |   1    |
 | 1 |   0    |
 
-<img src="./resource/NOT.png" width="50%">
+<img src="./resources/NOT.png" width="50%">
 
 ### NAND（否定論理積）
 - ANDの否定（両方1以外なら1）
@@ -147,7 +147,7 @@
 | 1 | 0 |     1     |
 | 1 | 1 |     0     |
 
-<img src="./resource/NAND.png" width="50%">
+<img src="./resources/NAND.png" width="50%">
 
 ### NOR（否定論理和）
 - ORの否定（どちらも0のときだけ1）
@@ -159,7 +159,7 @@
 | 1 | 0 |    0     |
 | 1 | 1 |    0     |
 
-<img src="./resource/NOR.png" width="50%">
+<img src="./resources/NOR.png" width="50%">
 
 ### XOR（排他的論理和）
 - 異なるときだけ1を出力
@@ -171,7 +171,7 @@
 | 1 | 0 |    1     |
 | 1 | 1 |    0     |
 
-<img src="./resource/XOR.png" width="50%">
+<img src="./resources/XOR.png" width="50%">
 
 ### 半加算器・Half Adder (HA)
 - 2進数1桁の加算回路
