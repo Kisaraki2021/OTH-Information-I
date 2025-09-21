@@ -14,6 +14,8 @@
 - [1学期期末](./s1-final)
 - [1学期期末(印刷用)](./s1-final-printout.md)
 - [夏休み課題 解答](./homework-summer.md)
+- [2学期中間](./s2-middle.md)
+- [2学期中間(印刷用)](./s2-middle-printout.md)
 
 ## 技術情報
 - このサイトはGitHub Pagesで作成され、ドメインはCloudflare Registerで取得しています
