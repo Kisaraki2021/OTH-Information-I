@@ -1,4 +1,4 @@
-# 情報I 1学期期末考査 対策プリント
+# 情報I 2学期中間考査 対策プリント
 - 以下のテキストはCC-BY-SA 4.0の下で提供されます
 - ![CC-BY-SA-4.0-International](https://creativecommons.jp/wp-content/uploads/2015/04/by-sa.png?w=297)
 
