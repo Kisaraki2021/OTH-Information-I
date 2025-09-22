@@ -16,7 +16,7 @@
 - [夏休み課題 解答](./homework-summer.md)
 - [2学期中間](./s2-middle.md)
 - [2学期中間(印刷用)](./s2-middle-printout.md)
-- [2学期中間(赤シート対応版)]
+- [2学期中間(赤シート対応版)](./s2-middle-printout-orange.html)
 
 ## 技術情報
 - このサイトはGitHub Pagesで作成され、ドメインはCloudflare Registerで取得しています
