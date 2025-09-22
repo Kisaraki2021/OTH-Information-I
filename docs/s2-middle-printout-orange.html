@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <title>s2-middle-printout</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <style>
+            code[class*=language-],
+            pre[class*=language-] {
+                  color: #333;
+                  background: 0 0;
+                  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+                  text-align: left;
+                  white-space: pre;
+                  word-spacing: normal;
+                  word-break: normal;
+                  word-wrap: normal;
+                  line-height: 1.4;
+                  -moz-tab-size: 8;
+                  -o-tab-size: 8;
+                  tab-size: 8;
+                  -webkit-hyphens: none;
+                  -moz-hyphens: none;
+                  -ms-hyphens: none;
+                  hyphens: none
+            }
+
+            pre[class*=language-] {
+                  padding: .8em;
+                  overflow: auto;
+                  border-radius: 3px;
+                  background: #f5f5f5
+            }
+
+            :not(pre)>code[class*=language-] {
+                  padding: .1em;
+                  border-radius: .3em;
+                  white-space: normal;
+                  background: #f5f5f5
+            }
+
+            .token.blockquote,
+            .token.comment {
+                  color: #969896
+            }
+
+            .token.cdata {
+                  color: #183691
+            }
+
+            .token.doctype,
+            .token.macro.property,
+            .token.punctuation,
+            .token.variable {
+                  color: #333
+            }
+
+            .token.builtin,
+            .token.important,
+            .token.keyword,
+            .token.operator,
+            .token.rule {
+                  color: #a71d5d
+            }
+
+            .token.attr-value,
+            .token.regex,
+            .token.string,
+            .token.url {
+                  color: #183691
+            }
+
+            .token.atrule,
+            .token.boolean,
+            .token.code,
+            .token.command,
+            .token.constant,
+            .token.entity,
+            .token.number,
+            .token.property,
+            .token.symbol {
+                  color: #0086b3
+            }
+
+            .token.prolog,
+            .token.selector,
+            .token.tag {
+                  color: #63a35c
+            }
+
+            .token.attr-name,
+            .token.class,
+            .token.class-name,
+            .token.function,
+            .token.id,
+            .token.namespace,
+            .token.pseudo-class,
+            .token.pseudo-element,
+            .token.url-reference .token.variable {
+                  color: #795da3
+            }
+
+            .token.entity {
+                  cursor: help
+            }
+
+            .token.title,
+            .token.title .token.punctuation {
+                  font-weight: 700;
+                  color: #1d3e81
+            }
+
+            .token.list {
+                  color: #ed6a43
+            }
+
+            .token.inserted {
+                  background-color: #eaffea;
+                  color: #55a532
+            }
+
+            .token.deleted {
+                  background-color: #ffecec;
+                  color: #bd2c00
+            }
+
+            .token.bold {
+                  font-weight: 700
+            }
+
+            .token.italic {
+                  font-style: italic
+            }
+
+            .language-json .token.property {
+                  color: #183691
+            }
+
+            .language-markup .token.tag .token.punctuation {
+                  color: #333
+            }
+
+            .language-css .token.function,
+            code.language-css {
+                  color: #0086b3
+            }
+
+            .language-yaml .token.atrule {
+                  color: #63a35c
+            }
+
+            code.language-yaml {
+                  color: #183691
+            }
+
+            .language-ruby .token.function {
+                  color: #333
+            }
+
+            .language-markdown .token.url {
+                  color: #795da3
+            }
+
+            .language-makefile .token.symbol {
+                  color: #795da3
+            }
+
+            .language-makefile .token.variable {
+                  color: #183691
+            }
+
+            .language-makefile .token.builtin {
+                  color: #0086b3
+            }
+
+            .language-bash .token.keyword {
+                  color: #0086b3
+            }
+
+            pre[data-line] {
+                  position: relative;
+                  padding: 1em 0 1em 3em
+            }
+
+            pre[data-line] .line-highlight-wrapper {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  background-color: transparent;
+                  display: block;
+                  width: 100%
+            }
+
+            pre[data-line] .line-highlight {
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  padding: inherit 0;
+                  margin-top: 1em;
+                  background: hsla(24, 20%, 50%, .08);
+                  background: linear-gradient(to right, hsla(24, 20%, 50%, .1) 70%, hsla(24, 20%, 50%, 0));
+                  pointer-events: none;
+                  line-height: inherit;
+                  white-space: pre
+            }
+
+            pre[data-line] .line-highlight:before,
+            pre[data-line] .line-highlight[data-end]:after {
+                  content: attr(data-start);
+                  position: absolute;
+                  top: .4em;
+                  left: .6em;
+                  min-width: 1em;
+                  padding: 0 .5em;
+                  background-color: hsla(24, 20%, 50%, .4);
+                  color: #f4f1ef;
+                  font: bold 65%/1.5 sans-serif;
+                  text-align: center;
+                  vertical-align: .3em;
+                  border-radius: 999px;
+                  text-shadow: none;
+                  box-shadow: 0 1px #fff
+            }
+
+            pre[data-line] .line-highlight[data-end]:after {
+                  content: attr(data-end);
+                  top: auto;
+                  bottom: .4em
+            }
+
+            html body {
+                  font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
+                  font-size: 16px;
+                  line-height: 1.6;
+                  color: #333;
+                  background-color: #fff;
+                  overflow: initial;
+                  box-sizing: border-box;
+                  word-wrap: break-word
+            }
+
+            html body>:first-child {
+                  margin-top: 0
+            }
+
+            html body h1,
+            html body h2,
+            html body h3,
+            html body h4,
+            html body h5,
+            html body h6 {
+                  line-height: 1.2;
+                  margin-top: 1em;
+                  margin-bottom: 16px;
+                  color: #000
+            }
+
+            html body h1 {
+                  font-size: 2.25em;
+                  font-weight: 300;
+                  padding-bottom: .3em
+            }
+
+            html body h2 {
+                  font-size: 1.75em;
+                  font-weight: 400;
+                  padding-bottom: .3em
+            }
+
+            html body h3 {
+                  font-size: 1.5em;
+                  font-weight: 500
+            }
+
+            html body h4 {
+                  font-size: 1.25em;
+                  font-weight: 600
+            }
+
+            html body h5 {
+                  font-size: 1.1em;
+                  font-weight: 600
+            }
+
+            html body h6 {
+                  font-size: 1em;
+                  font-weight: 600
+            }
+
+            html body h1,
+            html body h2,
+            html body h3,
+            html body h4,
+            html body h5 {
+                  font-weight: 600
+            }
+
+            html body h5 {
+                  font-size: 1em
+            }
+
+            html body h6 {
+                  color: #5c5c5c
+            }
+
+            html body strong {
+                  color: #ff3c3c
+            }
+
+            html body del {
+                  color: #5c5c5c
+            }
+
+            html body a:not([href]) {
+                  color: inherit;
+                  text-decoration: none
+            }
+
+            html body a {
+                  color: #08c;
+                  text-decoration: none
+            }
+
+            html body a:hover {
+                  color: #00a3f5;
+                  text-decoration: none
+            }
+
+            html body img {
+                  max-width: 100%
+            }
+
+            html body>p {
+                  margin-top: 0;
+                  margin-bottom: 16px;
+                  word-wrap: break-word
+            }
+
+            html body>ol,
+            html body>ul {
+                  margin-bottom: 16px
+            }
+
+            html body ol,
+            html body ul {
+                  padding-left: 2em
+            }
+
+            html body ol.no-list,
+            html body ul.no-list {
+                  padding: 0;
+                  list-style-type: none
+            }
+
+            html body ol ol,
+            html body ol ul,
+            html body ul ol,
+            html body ul ul {
+                  margin-top: 0;
+                  margin-bottom: 0
+            }
+
+            html body li {
+                  margin-bottom: 0
+            }
+
+            html body li.task-list-item {
+                  list-style: none
+            }
+
+            html body li>p {
+                  margin-top: 0;
+                  margin-bottom: 0
+            }
+
+            html body .task-list-item-checkbox {
+                  margin: 0 .2em .25em -1.8em;
+                  vertical-align: middle
+            }
+
+            html body .task-list-item-checkbox:hover {
+                  cursor: pointer
+            }
+
+            html body blockquote {
+                  margin: 16px 0;
+                  font-size: inherit;
+                  padding: 0 15px;
+                  color: #5c5c5c;
+                  background-color: #f0f0f0;
+                  border-left: 4px solid #d6d6d6
+            }
+
+            html body blockquote>:first-child {
+                  margin-top: 0
+            }
+
+            html body blockquote>:last-child {
+                  margin-bottom: 0
+            }
+
+            html body hr {
+                  height: 4px;
+                  margin: 32px 0;
+                  background-color: #d6d6d6;
+                  border: 0 none
+            }
+
+            html body table {
+                  margin: 10px 0 15px 0;
+                  border-collapse: collapse;
+                  border-spacing: 0;
+                  display: block;
+                  width: 100%;
+                  overflow: auto;
+                  word-break: normal;
+                  word-break: keep-all
+            }
+
+            html body table th {
+                  font-weight: 700;
+                  color: #000
+            }
+
+            html body table td,
+            html body table th {
+                  border: 1px solid #d6d6d6;
+                  padding: 6px 13px
+            }
+
+            html body dl {
+                  padding: 0
+            }
+
+            html body dl dt {
+                  padding: 0;
+                  margin-top: 16px;
+                  font-size: 1em;
+                  font-style: italic;
+                  font-weight: 700
+            }
+
+            html body dl dd {
+                  padding: 0 16px;
+                  margin-bottom: 16px
+            }
+
+            html body code {
+                  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+                  font-size: .85em;
+                  color: #000;
+                  background-color: #f0f0f0;
+                  border-radius: 3px;
+                  padding: .2em 0
+            }
+
+            html body code::after,
+            html body code::before {
+                  letter-spacing: -.2em;
+                  content: '\00a0'
+            }
+
+            html body pre>code {
+                  padding: 0;
+                  margin: 0;
+                  word-break: normal;
+                  white-space: pre;
+                  background: 0 0;
+                  border: 0
+            }
+
+            html body .highlight {
+                  margin-bottom: 16px
+            }
+
+            html body .highlight pre,
+            html body pre {
+                  padding: 1em;
+                  overflow: auto;
+                  line-height: 1.45;
+                  border: #d6d6d6;
+                  border-radius: 3px
+            }
+
+            html body .highlight pre {
+                  margin-bottom: 0;
+                  word-break: normal
+            }
+
+            html body pre code,
+            html body pre tt {
+                  display: inline;
+                  max-width: initial;
+                  padding: 0;
+                  margin: 0;
+                  overflow: initial;
+                  line-height: inherit;
+                  word-wrap: normal;
+                  background-color: transparent;
+                  border: 0
+            }
+
+            html body pre code:after,
+            html body pre code:before,
+            html body pre tt:after,
+            html body pre tt:before {
+                  content: normal
+            }
+
+            html body blockquote,
+            html body dl,
+            html body ol,
+            html body p,
+            html body pre,
+            html body ul {
+                  margin-top: 0;
+                  margin-bottom: 16px
+            }
+
+            html body kbd {
+                  color: #000;
+                  border: 1px solid #d6d6d6;
+                  border-bottom: 2px solid #c7c7c7;
+                  padding: 2px 4px;
+                  background-color: #f0f0f0;
+                  border-radius: 3px
+            }
+
+            @media print {
+                  html body {
+                        background-color: #fff
+                  }
+
+                  html body h1,
+                  html body h2,
+                  html body h3,
+                  html body h4,
+                  html body h5,
+                  html body h6 {
+                        color: #000;
+                        page-break-after: avoid
+                  }
+
+                  html body blockquote {
+                        color: #5c5c5c
+                  }
+
+                  html body pre {
+                        page-break-inside: avoid
+                  }
+
+                  html body table {
+                        display: table
+                  }
+
+                  html body img {
+                        display: block;
+                        max-width: 100%;
+                        max-height: 100%
+                  }
+
+                  html body code,
+                  html body pre {
+                        word-wrap: break-word;
+                        white-space: pre
+                  }
+            }
+
+            .markdown-preview {
+                  width: 100%;
+                  height: 100%;
+                  box-sizing: border-box
+            }
+
+            .markdown-preview ul {
+                  list-style: disc
+            }
+
+            .markdown-preview ul ul {
+                  list-style: circle
+            }
+
+            .markdown-preview ul ul ul {
+                  list-style: square
+            }
+
+            .markdown-preview ol {
+                  list-style: decimal
+            }
+
+            .markdown-preview ol ol,
+            .markdown-preview ul ol {
+                  list-style-type: lower-roman
+            }
+
+            .markdown-preview ol ol ol,
+            .markdown-preview ol ul ol,
+            .markdown-preview ul ol ol,
+            .markdown-preview ul ul ol {
+                  list-style-type: lower-alpha
+            }
+
+            .markdown-preview .newpage,
+            .markdown-preview .pagebreak {
+                  page-break-before: always
+            }
+
+            .markdown-preview pre.line-numbers {
+                  position: relative;
+                  padding-left: 3.8em;
+                  counter-reset: linenumber
+            }
+
+            .markdown-preview pre.line-numbers>code {
+                  position: relative
+            }
+
+            .markdown-preview pre.line-numbers .line-numbers-rows {
+                  position: absolute;
+                  pointer-events: none;
+                  top: 1em;
+                  font-size: 100%;
+                  left: 0;
+                  width: 3em;
+                  letter-spacing: -1px;
+                  border-right: 1px solid #999;
+                  -webkit-user-select: none;
+                  -moz-user-select: none;
+                  -ms-user-select: none;
+                  user-select: none
+            }
+
+            .markdown-preview pre.line-numbers .line-numbers-rows>span {
+                  pointer-events: none;
+                  display: block;
+                  counter-increment: linenumber
+            }
+
+            .markdown-preview pre.line-numbers .line-numbers-rows>span:before {
+                  content: counter(linenumber);
+                  color: #999;
+                  display: block;
+                  padding-right: .8em;
+                  text-align: right
+            }
+
+            .markdown-preview .mathjax-exps .MathJax_Display {
+                  text-align: center !important
+            }
+
+            .markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group {
+                  display: none
+            }
+
+            .markdown-preview:not([data-for=preview]) .code-chunk .status {
+                  display: none
+            }
+
+            .markdown-preview:not([data-for=preview]) .code-chunk .output-div {
+                  margin-bottom: 16px
+            }
+
+            .markdown-preview .md-toc {
+                  padding: 0
+            }
+
+            .markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link {
+                  display: inline;
+                  padding: .25rem 0
+            }
+
+            .markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,
+            .markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p {
+                  display: inline
+            }
+
+            .markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link {
+                  font-weight: 800
+            }
+
+            .scrollbar-style::-webkit-scrollbar {
+                  width: 8px
+            }
+
+            .scrollbar-style::-webkit-scrollbar-track {
+                  border-radius: 10px;
+                  background-color: transparent
+            }
+
+            .scrollbar-style::-webkit-scrollbar-thumb {
+                  border-radius: 5px;
+                  background-color: rgba(150, 150, 150, .66);
+                  border: 4px solid rgba(150, 150, 150, .66);
+                  background-clip: content-box
+            }
+
+            html body[for=html-export]:not([data-presentation-mode]) {
+                  position: relative;
+                  width: 100%;
+                  height: 100%;
+                  top: 0;
+                  left: 0;
+                  margin: 0;
+                  padding: 0;
+                  overflow: auto
+            }
+
+            html body[for=html-export]:not([data-presentation-mode]) .markdown-preview {
+                  position: relative;
+                  top: 0;
+                  min-height: 100vh
+            }
+
+            @media screen and (min-width:914px) {
+                  html body[for=html-export]:not([data-presentation-mode]) .markdown-preview {
+                        padding: 2em calc(50% - 457px + 2em)
+                  }
+            }
+
+            @media screen and (max-width:914px) {
+                  html body[for=html-export]:not([data-presentation-mode]) .markdown-preview {
+                        padding: 2em
+                  }
+            }
+
+            @media screen and (max-width:450px) {
+                  html body[for=html-export]:not([data-presentation-mode]) .markdown-preview {
+                        font-size: 14px !important;
+                        padding: 1em
+                  }
+            }
+
+            @media print {
+                  html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn {
+                        display: none
+                  }
+            }
+
+            html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn {
+                  position: fixed;
+                  bottom: 8px;
+                  left: 8px;
+                  font-size: 28px;
+                  cursor: pointer;
+                  color: inherit;
+                  z-index: 99;
+                  width: 32px;
+                  text-align: center;
+                  opacity: .4
+            }
+
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn {
+                  opacity: 1
+            }
+
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
+                  position: fixed;
+                  top: 0;
+                  left: 0;
+                  width: 300px;
+                  height: 100%;
+                  padding: 32px 0 48px 0;
+                  font-size: 14px;
+                  box-shadow: 0 0 4px rgba(150, 150, 150, .33);
+                  box-sizing: border-box;
+                  overflow: auto;
+                  background-color: inherit
+            }
+
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar {
+                  width: 8px
+            }
+
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track {
+                  border-radius: 10px;
+                  background-color: transparent
+            }
+
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb {
+                  border-radius: 5px;
+                  background-color: rgba(150, 150, 150, .66);
+                  border: 4px solid rgba(150, 150, 150, .66);
+                  background-clip: content-box
+            }
+
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a {
+                  text-decoration: none
+            }
+
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc {
+                  padding: 0 16px
+            }
+
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link {
+                  display: inline;
+                  padding: .25rem 0
+            }
+
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p {
+                  display: inline
+            }
+
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link {
+                  font-weight: 800
+            }
+
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
+                  left: 300px;
+                  width: calc(100% - 300px);
+                  padding: 2em calc(50% - 457px - 300px / 2);
+                  margin: 0;
+                  box-sizing: border-box
+            }
+
+            @media screen and (max-width:1274px) {
+                  html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
+                        padding: 2em
+                  }
+            }
+
+            @media screen and (max-width:450px) {
+                  html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
+                        width: 100%
+                  }
+            }
+
+            html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+                  left: 50%;
+                  transform: translateX(-50%)
+            }
+
+            html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc {
+                  display: none
+            }
+
+            /* Please visit the URL below for more information: */
+            /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+      </style>
+      <!-- The content below will be included at the end of the <head> element. -->
+      <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function () {
+                  // your code here
+            });
+      </script>
+</head>
+
+<body for="html-export">
+
+
+      <div class="crossnote markdown-preview  ">
+
+            <h1 id="情報i-1学期期末考査-対策プリント">情報I 1学期期末考査 対策プリント </h1>
+            <h1 id="2章-情報デザイン">2章 情報デザイン </h1>
+            <h2 id="用語">用語 </h2>
+            <ul>
+                  <li><strong>フォント</strong>
+                        <ul>
+                              <li>文字の書体</li>
+                        </ul>
+                  </li>
+                  <li><strong>色の三要素</strong>
+                        <ul>
+                              <li>色相, 明度, 彩度</li>
+                        </ul>
+                  </li>
+                  <li><strong>色相環</strong>
+                        <ul>
+                              <li>色相の関係を表した図</li>
+                        </ul>
+                  </li>
+                  <li><strong>類似色</strong>
+                        <ul>
+                              <li>色相環の隣り合った色</li>
+                        </ul>
+                  </li>
+                  <li><strong>補色</strong>
+                        <ul>
+                              <li>色相環の反対側の色</li>
+                        </ul>
+                  </li>
+                  <li><strong>同系色</strong>
+                        <ul>
+                              <li>同じ色相で明度, 彩度の異なる色</li>
+                        </ul>
+                  </li>
+                  <li><strong>ピクトグラム</strong>
+                        <ul>
+                              <li>記号だけで意味を伝えるために2色で抽象化された図</li>
+                        </ul>
+                  </li>
+                  <li><strong>可視化</strong>
+                        <ul>
+                              <li>物事をぱっと見で分かるようにすること</li>
+                        </ul>
+                  </li>
+                  <li><strong>データフロー図</strong>
+                        <ul>
+                              <li>プログラムの設計を図にしたもの</li>
+                              <li>図形を多用する(長方形, 楕円, 平行四辺形, ひし形等)</li>
+                        </ul>
+                  </li>
+                  <li><strong>フローチャート</strong>
+                        <ul>
+                              <li>手順を示す図</li>
+                        </ul>
+                  </li>
+                  <li><strong>アフォーダンス</strong>
+                        <ul>
+                              <li>あるものに対して, 私たちが実施可能な操作や行為のこと</li>
+                        </ul>
+                  </li>
+                  <li><strong>Webサイト</strong></li>
+                  <li><strong>ハイパーリンク</strong>
+                        <ul>
+                              <li>Webサイト同士の繋がり</li>
+                        </ul>
+                  </li>
+                  <li><strong>ハイパーテキスト</strong>
+                        <ul>
+                              <li>サイト上の要素をクリックすると動きがある文書</li>
+                        </ul>
+                  </li>
+                  <li><strong>リンク</strong>
+                        <ul>
+                              <li>ハイパーテキストで作った繋がり</li>
+                        </ul>
+                  </li>
+            </ul>
+            <h2 id="補足">補足 </h2>
+            <ul>
+                  <li>色相環
+                        <ul>
+                              <li>隣り合うのが類似色, 反対側にあるのが補色<br>
+                                    <img src="resources/color-wheel.png" alt="色相環">
+                              </li>
+                        </ul>
+                  </li>
+            </ul>
+            <h1 id="3章-デジタル">3章 デジタル </h1>
+            <h2 id="用語-1">用語 </h2>
+            <ul>
+                  <li><strong>中央処理装置</strong> (<strong>CPU</strong>)
+                        <ul>
+                              <li>PCの中心, 脳のような部分</li>
+                              <li>制御装置, 演算装置からなる</li>
+                        </ul>
+                  </li>
+                  <li><strong>主記憶装置</strong>
+                        <ul>
+                              <li>PCが処理をするときにデータを置く場所, 作業机のような部分</li>
+                        </ul>
+                  </li>
+                  <li><strong>補助記憶装置</strong>
+                        <ul>
+                              <li>長期間データを保存する場所, スマホやPCのストレージ</li>
+                        </ul>
+                  </li>
+                  <li><strong>入力装置</strong>
+                        <ul>
+                              <li>キーボード, マウス, タッチパネル</li>
+                        </ul>
+                  </li>
+                  <li><strong>出力装置</strong>
+                        <ul>
+                              <li>画面, スピーカー</li>
+                        </ul>
+                  </li>
+                  <li><strong>キャッシュメモリ</strong>
+                        <ul>
+                              <li>CPUから主記憶装置にアクセスするには時間が掛かる(後述)ので, その間に置かれる高速なデータ保存場所</li>
+                        </ul>
+                  </li>
+                  <li><strong>クロック信号</strong>
+                        <ul>
+                              <li>PCの複数の部品が同じタイミングで処理をするための信号</li>
+                        </ul>
+                  </li>
+                  <li><strong>クロック周波数</strong>
+                        <ul>
+                              <li>1秒間のクロック信号の回数, 単位はHz</li>
+                              <li>CPUの処理速度の指標の1つ</li>
+                        </ul>
+                  </li>
+                  <li><strong>オペレーティングシステム</strong>
+                        <ul>
+                              <li>基本ソフトウェア</li>
+                        </ul>
+                  </li>
+                  <li><strong>ユーザーインターフェース</strong>
+                        <ul>
+                              <li>人がPCを使うときに操作する手段</li>
+                        </ul>
+                  </li>
+                  <li><strong>誤差</strong>
+                        <ul>
+                              <li>PCで計算をする際, 仕組み上少し数値がずれることがある</li>
+                              <li>特に四捨五入などの時に起こる誤差を<strong>丸め誤差</strong>と呼ぶ</li>
+                        </ul>
+                  </li>
+                  <li><strong>圧縮</strong>
+                        <ul>
+                              <li>データを容量を小さくする処理</li>
+                        </ul>
+                  </li>
+                  <li><strong>伸長</strong>
+                        <ul>
+                              <li>圧縮したデータを元に戻す処理, 展開、解凍、復元とも</li>
+                        </ul>
+                  </li>
+                  <li><strong>可逆圧縮</strong>
+                        <ul>
+                              <li>伸長したときに完全に元通りになる圧縮の種類</li>
+                        </ul>
+                  </li>
+                  <li><strong>非可逆圧縮</strong>
+                        <ul>
+                              <li>伸長したときに完全には元通りにならない圧縮の種類</li>
+                        </ul>
+                  </li>
+                  <li><strong>ランレングス圧縮</strong>
+                        <ul>
+                              <li>同じ文字が連続したデータを"文字×個数"のような形に置き換えてデータ量を少なくする技術</li>
+                        </ul>
+                  </li>
+                  <li><strong>ハフマン符号化</strong>
+                        <ul>
+                              <li>文字列のうち、出現回数の多いものには短いbit、少ないものには長いbitを割り当ててbit長を節約してデータ量を少なくする技術</li>
+                        </ul>
+                  </li>
+            </ul>
+            <h2 id="補足-1">補足 </h2>
+            <ul>
+                  <li>キャッシュメモリの計算
+                        <ul>
+                              <li>H:ヒット率 とすると<strong>実効アクセス時間</strong>は以下で計算できる
+                                    <ul>
+                                          <li>( キャッシュメモリのアクセス時間 × H ) + ( 主記憶装置のアクセス時間 × ( 1-H ))</li>
+                                    </ul>
+                              </li>
+                              <li>この式で全て解けます, 1次方程式は各自で解いてください</li>
+                        </ul>
+                  </li>
+                  <li>ノートP.37 大門4について
+                        <ul>
+                              <li>Q.そもそもこれは何
+                                    <ul>
+                                          <li>A. アセンブリという古代のプログラミングです。今は使われません。問題では四則演算のみが出題されます。解けなくてもいいかもしれません。</li>
+                                    </ul>
+                              </li>
+                              <li>基本概念
+                                    <ul>
+                                          <li>メモリ, レジスタ, 命令という3つの要素があります。</li>
+                                          <li>メモリは与式と回答欄です。各欄に1つ数字が保存されています。</li>
+                                          <li>レジスタとは数字を1つ保存できる, 計算用紙のようなものです。</li>
+                                          <li>命令とは数字の操作のことです。問題に説明が付いているので覚える必要はありません。</li>
+                                          <li>足し算しかないので, 掛け算は足し算の繰り返しで作ります。</li>
+                                    </ul>
+                              </li>
+                              <li>解き方
+                                    <ul>
+                                          <li>複雑な掛け算のみを解説します<br>
+                                                足し算ではレジスタBとジャンプ命令がないです</li>
+                                    </ul>
+                                    <ol>
+                                          <li>メモリからレジスタA, Bにに掛ける数、掛けられる数をそれぞれ読み出し</li>
+                                          <li>ADD命令でかける数(レジスタA)にかける数(メモリ)を足す</li>
+                                          <li>掛けられる数(レジスタB)から1(メモリ)を引く</li>
+                                          <li>レジスタBが0でないなら2に戻る, 0なら何もしない(ノートでのJNZ命令)</li>
+                                          <li>指定のメモリにレジスタAの数字を書き出し</li>
+                                    </ol>
+                              </li>
+                        </ul>
+                  </li>
+            </ul>
+            <h1 id="4章-ネットワーク">4章 ネットワーク </h1>
+            <h2 id="用語-2">用語 </h2>
+            <ul>
+                  <li><strong>LAN</strong>
+                        <ul>
+                              <li><em>ローカル エリア ネットワーク</em>の略</li>
+                              <li>家・学校・ビル等の<em>小規模のネットワーク</em></li>
+                        </ul>
+                  </li>
+                  <li><strong>WAN</strong>
+                        <ul>
+                              <li><em>ワイド エリア ネットワーク</em>の略</li>
+                              <li>LAN同士を繋げた<em>大規模なネットワーク</em></li>
+                        </ul>
+                  </li>
+                  <li><strong>集中処理システム</strong>
+                        <ul>
+                              <li>処理を1台のPCに全部やらせる仕組み</li>
+                        </ul>
+                  </li>
+                  <li><strong>分散処理システム</strong>
+                        <ul>
+                              <li>処理を複数のPCに分けてやらせる仕組み</li>
+                              <li>2種類ある</li>
+                        </ul>
+                  </li>
+                  <li><strong>プリントサーバ</strong>
+                        <ul>
+                              <li>PCとプリンタを繋げて印刷できるようにする</li>
+                        </ul>
+                  </li>
+                  <li><strong>データベースサーバ</strong>
+                        <ul>
+                              <li>データを管理する</li>
+                        </ul>
+                  </li>
+                  <li><strong>Webサーバ</strong>
+                        <ul>
+                              <li>Webサイトのデータを送る</li>
+                        </ul>
+                  </li>
+                  <li><strong>メールサーバ</strong>
+                        <ul>
+                              <li>メールの送受信をする</li>
+                        </ul>
+                  </li>
+                  <li><strong>プロトコル</strong>
+                        <ul>
+                              <li>データを扱うときの決まり事</li>
+                        </ul>
+                  </li>
+                  <li><strong>TCP/IP</strong>
+                        <ul>
+                              <li>インターネットの通信のためのプロトコル</li>
+                        </ul>
+                  </li>
+                  <li><strong>ヘッダ情報</strong>
+                        <ul>
+                              <li>データに後付けされた, どのプロトコルを使っているかの情報</li>
+                        </ul>
+                  </li>
+                  <li><strong>IPアドレス</strong>
+                        <ul>
+                              <li>TCP/IPで通信するPCの識別番号</li>
+                        </ul>
+                  </li>
+                  <li><strong>グローバルアドレス</strong>
+                        <ul>
+                              <li>IPアドレスのうち, WAN(≒インターネット)で使われるもの</li>
+                        </ul>
+                  </li>
+                  <li><strong>プライベートアドレス</strong>
+                        <ul>
+                              <li>IPアドレスのうち, LANで使われるもの</li>
+                        </ul>
+                  </li>
+                  <li><strong>NAT</strong>
+                        <ul>
+                              <li>LAN内の端末がWAN側と通信する際に上記2つを変換する仕組み</li>
+                        </ul>
+                  </li>
+                  <li><strong>DHCP</strong>
+                        <ul>
+                              <li>LAN内でIPアドレスを割り当てる機能</li>
+                        </ul>
+                  </li>
+                  <li><strong>ホスト名</strong>
+                        <ul>
+                              <li>LAN内のPCの識別名</li>
+                              <li>IPアドレスは人間には扱いづらいので1対1対応の別の名前を付けている</li>
+                        </ul>
+                  </li>
+                  <li><strong>名前解決</strong>
+                        <ul>
+                              <li>ドメイン名→IPアドレスに変換する作業</li>
+                        </ul>
+                  </li>
+                  <li><strong>DNS</strong>
+                        <ul>
+                              <li>名前解決をする仕組み</li>
+                        </ul>
+                  </li>
+                  <li><strong>パケット</strong>
+                        <ul>
+                              <li>そもそもネットで通信するときはデータをこま切れにして送っていて, その一つ一つのことを指す</li>
+                        </ul>
+                  </li>
+                  <li><strong>パケット交換</strong>
+                        <ul>
+                              <li>こま切れにしたので複数人が同時に通信しても少しずつ譲り合って送れる仕組み</li>
+                        </ul>
+                  </li>
+                  <li><strong>ルータ</strong>
+                        <ul>
+                              <li>ネットワーク上に置いて, 受け取ったパケットを次の宛先に送る機器</li>
+                              <li>その処理を<strong>ルーティング</strong>と言う</li>
+                        </ul>
+                  </li>
+            </ul>
+            <h2 id="補足-2">補足 </h2>
+            <ul>
+                  <li>分散処理システムの2種類
+                        <ul>
+                              <li><em>クライアントサーバシステム</em>
+                                    <ul>
+                                          <li>処理をするPCと処理を要求するPCが明確に分かれている</li>
+                                    </ul>
+                              </li>
+                              <li><em>ピアツーピアシステム</em>
+                                    <ul>
+                                          <li>複数のPCが対等に処理をする</li>
+                                    </ul>
+                              </li>
+                        </ul>
+                  </li>
+                  <li>プロトコルの種類
+                        <ul>
+                              <li><strong>HTTP/HTTPS</strong>
+                                    <ul>
+                                          <li><em>Webサイト</em>を見るのに使う</li>
+                                          <li>Sが付いていると<em>暗号化</em>され, セキュリティが高い(<strong>SSL</strong>)</li>
+                                          <li>HTの由来はHTML</li>
+                                    </ul>
+                              </li>
+                              <li><strong>SMTP</strong>
+                                    <ul>
+                                          <li><em>メールの送信</em>に使う</li>
+                                          <li>SMTPのMはMailの頭文字</li>
+                                    </ul>
+                              </li>
+                              <li><strong>POP/IMAP</strong>
+                                    <ul>
+                                          <li><em>メールの受信</em>に使う</li>
+                                          <li>POPは1端末だけ, サーバには残らない</li>
+                                          <li>IMAPは複数端末で使える, サーバに残る</li>
+                                    </ul>
+                              </li>
+                              <li><strong>SSH</strong>
+                                    <ul>
+                                          <li><em>リモート接続</em>と書いてあればこれ</li>
+                                    </ul>
+                              </li>
+                        </ul>
+                  </li>
+                  <li>アドレス関連
+                        <ul>
+                              <li><code>https://www.osakatoin.ed.jp/about/</code>というアドレスを例にします
+                                    <ul>
+                                          <li><strong>ドメイン名</strong>
+                                                <ul>
+                                                      <li><code>osakatoin.ed.jp</code>の部分</li>
+                                                </ul>
+                                          </li>
+                                          <li><strong>FQDN</strong>
+                                                <ul>
+                                                      <li><code>www.osakatoin.ed.jp</code>の部分</li>
+                                                      <li><em>完全修飾ドメイン</em>とも</li>
+                                                </ul>
+                                          </li>
+                                          <li><strong>URL</strong>
+                                                <ul>
+                                                      <li><code>https://www.osakatoin.ed.jp/about/</code>の部分(全体)</li>
+                                                </ul>
+                                          </li>
+                                    </ul>
+                              </li>
+                        </ul>
+                  </li>
+                  <li>メール
+                        <ul>
+                              <li><strong>メールボックス</strong>
+                                    <ul>
+                                          <li>メールサーバにあるメール一時保管場所</li>
+                                    </ul>
+                              </li>
+                              <li><strong>宛先(To)</strong>
+                                    <ul>
+                                          <li>ここに書いたメアドの人とやり取り</li>
+                                    </ul>
+                              </li>
+                              <li><strong>CC</strong>
+                                    <ul>
+                                          <li>対応は不要だが内容を把握してもらいたい相手</li>
+                                    </ul>
+                              </li>
+                              <li><strong>BCC</strong>
+                                    <ul>
+                                          <li>宛先の人に見られないCC</li>
+                                    </ul>
+                              </li>
+                        </ul>
+                  </li>
+                  <li>メール送受信の仕組み
+                        <ol>
+                              <li>送信者のPC→送信者のメールサーバにデータ送信</li>
+                              <li>メールサーバが宛先が誰かDNSサーバに問い合わせる</li>
+                              <li>宛先のメールボックスに送信</li>
+                              <li>受信者(宛先)のメールボックスにデータが届く</li>
+                              <li>受信者PCから受信メールボックスに受信要求する</li>
+                              <li>受信者PCにデータがダウンロードされる<br>
+                                    <br>
+                              </li>
+                        </ol>
+                  </li>
+                  <li>インターネットの階層とプロトコルの関係表
+                        <ul>
+                              <li>順番とプロトコルの対応を覚えましょう</li>
+                        </ul>
+                  </li>
+            </ul>
+            <table>
+                  <thead>
+                        <tr>
+                              <th>階層</th>
+                              <th>プロトコル</th>
+                        </tr>
+                  </thead>
+                  <tbody>
+                        <tr>
+                              <td>アプリケーション層</td>
+                              <td>HTTP, SMTP</td>
+                        </tr>
+                        <tr>
+                              <td>トランスポート層</td>
+                              <td>TCP</td>
+                        </tr>
+                        <tr>
+                              <td>インターネット層</td>
+                              <td>IP</td>
+                        </tr>
+                        <tr>
+                              <td>ネットワークインターフェース層</td>
+                              <td>有線LAN, Wi-Fi</td>
+                        </tr>
+                  </tbody>
+            </table>
+
+      </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -3,8 +3,9 @@
 - ![CC-BY-SA-4.0-International](https://creativecommons.jp/wp-content/uploads/2015/04/by-sa.png?w=297)
 
 ## 印刷用
-- 紙に印刷する用のデータを用意しました  
-- [リンク](./s2-middle-printout.md)
+- [紙に印刷する用のデータ](./s2-middle-printout.md)を用意しました  
+- [赤シート対応版](./s2-middle-printout-orange.html)を用意しました
+
 
 ## 留意事項
 - これは学校公式のものではありません
