@@ -17,6 +17,8 @@
 - [2学期中間](./s2-middle.md)
 - [2学期中間(印刷用)](./s2-middle-printout.md)
 - [2学期中間(赤シート対応版)](./s2-middle-printout-orange.html)
+- [2学期期末](./s2-final.md)
+- [2学期期末(印刷用・赤シート対応)](./s2-final-printout.html)
 
 ## 技術情報
 - このサイトはGitHub Pagesで作成され、ドメインはCloudflare Registerで取得しています
