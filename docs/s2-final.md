@@ -10,7 +10,7 @@
 ## 用語
 - 情報システム
 - POS
-    - どんな人が何を買ったかの情報を集めるサイト
+    - どんな人が何を買ったかの情報を集めるシステム
 - 電子商取引
     - ネットで契約、支払い、購入などをするシステム
 - ECサイト
@@ -97,10 +97,17 @@
     - データ同士を互いに関係付けて管理するDB
     - 実際には表で関連付ける
     - **SQL**という言語でDBを操作する
-
-
+- SQLで行う操作の種類(3つ覚える)
+    - 選択 → 表から条件にあった行を取り出す
+    ![選択](https://cdn-ak.f.st-hatena.com/images/fotolife/a/auroralights/20200323/20200323232415.png)
+    - 射影 → 表から必要なデータを指定して取り出す
+    ![射影](https://cdn-ak.f.st-hatena.com/images/fotolife/a/auroralights/20200323/20200323232614.png)
+    - 結合 → 複数の表をまとめる
+    ![結合](https://cdn-ak.f.st-hatena.com/images/fotolife/a/auroralights/20200323/20200323232921.png)
+> 画像引用:https://auroralights.jp/
 
 ## データ量の計算
+
 
 ## インターネットの階層とプロトコルの関係表
 
