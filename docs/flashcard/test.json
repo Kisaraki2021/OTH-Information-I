@@ -252,7 +252,7 @@
         "alternativeAnswers": [
             "エラー検出符号"
         ],
-        "note": ""
+        "note": "パリティビットは偶数・奇数を数える方式"
     },
     {
         "number": 30,
@@ -360,23 +360,30 @@
     },
     {
         "number": 41,
-        "question": "HTTP, SMTPが属するインターネットの階層は？",
+        "question": "HTTP, SMTPが属するインターネットの階層は？ (ノートの図の1番上)(",
         "answer": "アプリケーション層",
         "alternativeAnswers": [],
         "note": ""
     },
     {
         "number": 42,
-        "question": "TCPが属するインターネットの階層は？",
+        "question": "TCPが属するインターネットの階層は？ (ノートの図の上から2番目)(",
         "answer": "トランスポート層",
         "alternativeAnswers": [],
         "note": ""
     },
     {
         "number": 43,
-        "question": "IPが属するインターネットの階層は？",
+        "question": "IPが属するインターネットの階層は？ (ノートの図の上から3番目)",
         "answer": "インターネット層",
         "alternativeAnswers": [],
         "note": ""
+    },
+    {
+        "number": 44,
+        "question": "Ethernetが属するインターネットの階層は？ (ノートの図の一番下)",
+        "answer": "ネットワークインターフェース層",
+        "alternativeAnswers": [],
+        "note": "Ethernetっていうのは覚えなくて大丈夫"
     }
 ]
