@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テスト（入力式） - 情報I フラッシュカード</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ハンバーガーメニュー -->
+    <div class="hamburger-menu">
+        <button id="hamburger-btn" class="hamburger-btn" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div id="menu-content" class="menu-content">
+            <a href="index.html">🏠 モード選択</a>
+            <a href="learn.html">📖 学習モード</a>
+            <a href="test-select.html">✅ テスト（選択式）</a>
+            <a href="test-input.html">✏️ テスト（入力式）</a>
+            <hr class="menu-divider">
+            <a href="../index.html">📚 トップページ</a>
+            <a href="../s2-final.html">📝 2学期期末対策プリント</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>✏️ テストモード（入力式）</h1>
+
+        <!-- スコア表示 -->
+        <div class="score-display">
+            <span id="score">正解: 0 / 0</span>
+        </div>
+
+        <!-- 進捗表示 -->
+        <div class="progress">
+            <span id="progress">1 / 43</span>
+        </div>
+
+        <!-- 問題カード -->
+        <div class="test-card">
+            <p id="question-text" class="question-text">読み込み中...</p>
+        </div>
+
+        <!-- 入力欄 -->
+        <div class="input-area">
+            <input type="text" id="answer-input" class="answer-input" placeholder="答えを入力..." autocomplete="off">
+            <button id="submit-btn" class="control-btn submit-btn" onclick="submitAnswer()">回答する</button>
+        </div>
+
+        <!-- 結果表示 -->
+        <div id="result" class="result" style="display: none;">
+            <p id="result-text"></p>
+            <p id="correct-answer"></p>
+        </div>
+
+        <!-- 次へボタン -->
+        <div class="nav-buttons">
+            <button id="next-btn" class="control-btn" onclick="nextQuestion()" style="display: none;">
+                次の問題 ▶
+            </button>
+        </div>
+
+        <!-- 最終結果 -->
+        <div id="final-result" class="final-result" style="display: none;">
+            <h2>テスト終了！</h2>
+            <p id="final-score"></p>
+            <div class="control-buttons">
+                <button class="control-btn" onclick="restartTest()">🔄 もう一度</button>
+                <button class="control-btn" onclick="location.href='index.html'">🏠 ホームへ</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="test-input.js"></script>
+</body>
+
+</html>

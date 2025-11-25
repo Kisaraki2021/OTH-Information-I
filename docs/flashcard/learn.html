@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学習モード - 情報I フラッシュカード</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ハンバーガーメニュー -->
+    <div class="hamburger-menu">
+        <button id="hamburger-btn" class="hamburger-btn" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div id="menu-content" class="menu-content">
+            <a href="index.html">🏠 モード選択</a>
+            <a href="learn.html">📖 学習モード</a>
+            <a href="test-select.html">✅ テスト（選択式）</a>
+            <a href="test-input.html">✏️ テスト（入力式）</a>
+            <hr class="menu-divider">
+            <a href="../index.html">📚 トップページ</a>
+            <a href="../s2-final.html">📝 2学期期末対策プリント</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>📖 学習モード</h1>
+
+        <!-- 進捗表示 -->
+        <div class="progress">
+            <span id="progress">1 / 46</span>
+        </div>
+
+        <!-- カード -->
+        <div class="card-container">
+            <div id="card" class="card" onclick="flipCard()">
+                <div class="card-face card-front">
+                    <span class="card-label">問題</span>
+                    <p id="question-text" class="question-text">読み込み中...</p>
+                    <span class="tap-hint">タップで解答を表示</span>
+                </div>
+                <div class="card-face card-back">
+                    <span class="card-label">解答</span>
+                    <p id="answer-text" class="answer-text">読み込み中...</p>
+                    <p id="note-text" class="note-text"></p>
+                    <span class="tap-hint">タップで問題に戻る</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ナビゲーションボタン -->
+        <div class="nav-buttons">
+            <button id="prev-btn" class="nav-btn" onclick="prevQuestion()" title="前の問題">
+                ◀
+            </button>
+            <button id="next-btn" class="nav-btn" onclick="nextQuestion()" title="次の問題">
+                ▶
+            </button>
+        </div>
+
+        <!-- コントロールボタン -->
+        <div class="control-buttons">
+            <button class="control-btn" onclick="shuffleQuestions()">🔀 シャッフル</button>
+            <button class="control-btn" onclick="resetToStart()">🔄 最初に戻る</button>
+        </div>
+    </div>
+
+    <script src="learn.js"></script>
+</body>
+
+</html>

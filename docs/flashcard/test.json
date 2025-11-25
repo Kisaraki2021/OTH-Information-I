@@ -1,0 +1,382 @@
+[
+    {
+        "number": 1,
+        "question": "どの商品がどれだけ売れたかの情報を集めるシステムを何という？",
+        "answer": "POS",
+        "alternativeAnswers": [
+            "ポス",
+            "ピーオーエス"
+        ],
+        "note": ""
+    },
+    {
+        "number": 2,
+        "question": "ネットで契約、支払い、購入などをするシステムを何という？",
+        "answer": "電子商取引",
+        "alternativeAnswers": [
+            "eコマース",
+            "EC",
+            "イーコマース"
+        ],
+        "note": ""
+    },
+    {
+        "number": 3,
+        "question": "ネットで銀行振込、残高照会などができる仕組みを何という？",
+        "answer": "インターネットバンキング",
+        "alternativeAnswers": [
+            "ネットバンキング",
+            "オンラインバンキング"
+        ],
+        "note": ""
+    },
+    {
+        "number": 4,
+        "question": "現金を使わずに支払いをする仕組みを何という？",
+        "answer": "キャッシュレス",
+        "alternativeAnswers": [
+            "キャッシュレス決済"
+        ],
+        "note": ""
+    },
+    {
+        "number": 5,
+        "question": "交通系IC、iD、QUICPayなど、キャッシュレスの支払い方の一つを何という？",
+        "answer": "電子マネー",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 6,
+        "question": "電子マネーの中で電車に乗れるもの（ICOCA, Suica等）を何という？",
+        "answer": "交通系IC",
+        "alternativeAnswers": [
+            "交通系ICカード",
+            "交通系電子マネー"
+        ],
+        "note": ""
+    },
+    {
+        "number": 7,
+        "question": "大量のデータを整理して扱うための箱のようなものを何という？",
+        "answer": "データベース",
+        "alternativeAnswers": [
+            "DB"
+        ],
+        "note": ""
+    },
+    {
+        "number": 8,
+        "question": "データベースを扱うためのシステムを何という？（略称可）",
+        "answer": "DBMS",
+        "alternativeAnswers": [
+            "データベース管理システム",
+            "データベースマネジメントシステム"
+        ],
+        "note": ""
+    },
+    {
+        "number": 9,
+        "question": "ネットのおかげで集まった大量のデータを何という？",
+        "answer": "ビッグデータ",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 10,
+        "question": "公開されていて、決められた約束事の範囲で自由に扱えるデータを何という？",
+        "answer": "オープンデータ",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 11,
+        "question": "情報セキュリティで「情報をいつでも見られるようにすること」を何という？",
+        "answer": "可用性",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 12,
+        "question": "情報セキュリティで「勝手に情報が書き換えられないようにすること」を何という？",
+        "answer": "完全性",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 13,
+        "question": "情報セキュリティで「許可された人だけがアクセスできるようにすること」を何という？",
+        "answer": "機密性",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 14,
+        "question": "コンピュータやサービスを利用するための権利を何という？",
+        "answer": "アカウント",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 15,
+        "question": "個人を識別するための文字列を何という？",
+        "answer": "ユーザID",
+        "alternativeAnswers": [
+            "ユーザーID",
+            "ユーザーアイディー",
+            "ユーザアイディー",
+            "ID"
+        ],
+        "note": ""
+    },
+    {
+        "number": 16,
+        "question": "本人確認のための文字列を何という？",
+        "answer": "パスワード",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 17,
+        "question": "コンピュータやサービスを利用開始することを何という？",
+        "answer": "ログイン",
+        "alternativeAnswers": [
+            "サインイン"
+        ],
+        "note": ""
+    },
+    {
+        "number": 18,
+        "question": "悪意のあるプログラムの総称を何という？",
+        "answer": "マルウェア",
+        "alternativeAnswers": [
+            "ウイルス",
+            "ウィルス"
+        ],
+        "note": ""
+    },
+    {
+        "number": 19,
+        "question": "マルウェアのうち、他の端末に感染して増えるものを何という？",
+        "answer": "コンピュータウイルス",
+        "alternativeAnswers": [
+            "ウイルス",
+            "ウィルス",
+            "コンピュータウィルス"
+        ],
+        "note": ""
+    },
+    {
+        "number": 20,
+        "question": "ソフトウェアの欠陥のうち、安全性に関わるものを何という？",
+        "answer": "セキュリティホール",
+        "alternativeAnswers": [
+            "脆弱性"
+        ],
+        "note": ""
+    },
+    {
+        "number": 21,
+        "question": "本来使えないコンピュータにアクセスすることを何という？",
+        "answer": "不正アクセス",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 22,
+        "question": "不正アクセスから守る技術で、インターネットと内部ネットワークの間に設置するものを何という？",
+        "answer": "ファイアウォール",
+        "alternativeAnswers": [
+            "ファイアーウォール",
+            "FW"
+        ],
+        "note": ""
+    },
+    {
+        "number": 23,
+        "question": "不適切な情報にアクセスできないようにする仕組みを何という？",
+        "answer": "コンテンツフィルタリング",
+        "alternativeAnswers": [
+            "フィルタリング"
+        ],
+        "note": ""
+    },
+    {
+        "number": 24,
+        "question": "コンテンツフィルタリングで「見たらダメなものだけを禁止する方法」を何という？",
+        "answer": "ブラックリスト",
+        "alternativeAnswers": [
+            "ブラックリスト方式"
+        ],
+        "note": ""
+    },
+    {
+        "number": 25,
+        "question": "コンテンツフィルタリングで「見てもいいものだけ許可する方法」を何という？",
+        "answer": "ホワイトリスト",
+        "alternativeAnswers": [
+            "ホワイトリスト方式"
+        ],
+        "note": ""
+    },
+    {
+        "number": 26,
+        "question": "画像や音声データに埋め込んで、著作権侵害を防ぐ技術を何という？",
+        "answer": "電子透かし",
+        "alternativeAnswers": [
+            "ウォーターマーク"
+        ],
+        "note": ""
+    },
+    {
+        "number": 27,
+        "question": "暗号資産などで使われる、複数の分散したコンピュータに分けてデータを管理する仕組みを何という？",
+        "answer": "ブロックチェーン",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 28,
+        "question": "インターネットに仮想的な専用回線を作って安全に通信する仕組みを何という？",
+        "answer": "VPN",
+        "alternativeAnswers": [
+            "ブイピーエヌ",
+            "仮想プライベートネットワーク"
+        ],
+        "note": ""
+    },
+    {
+        "number": 29,
+        "question": "データ送受信時にデータが途中で変わっていないかを確かめるために付けられる符号を何という？",
+        "answer": "誤り検出符号",
+        "alternativeAnswers": [
+            "エラー検出符号"
+        ],
+        "note": ""
+    },
+    {
+        "number": 30,
+        "question": "1つの暗号鍵で暗号化と復号をする方式を何という？",
+        "answer": "共通鍵暗号",
+        "alternativeAnswers": [
+            "共通鍵暗号方式",
+            "対称鍵暗号"
+        ],
+        "note": ""
+    },
+    {
+        "number": 31,
+        "question": "文字列をずらして暗号化する仕組み（例: Apple → Bqqmf）を何という？",
+        "answer": "シーザー暗号",
+        "alternativeAnswers": [
+            "カエサル暗号"
+        ],
+        "note": ""
+    },
+    {
+        "number": 32,
+        "question": "公開鍵と秘密鍵の2種類の鍵を使って暗号化する方式を何という？",
+        "answer": "公開鍵暗号",
+        "alternativeAnswers": [
+            "公開鍵暗号方式",
+            "非対称鍵暗号"
+        ],
+        "note": ""
+    },
+    {
+        "number": 33,
+        "question": "公開鍵暗号で暗号化のために使う鍵を何という？",
+        "answer": "公開鍵",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 34,
+        "question": "公開鍵暗号で復号のために使う鍵を何という？",
+        "answer": "秘密鍵",
+        "alternativeAnswers": [
+            "プライベートキー"
+        ],
+        "note": ""
+    },
+    {
+        "number": 35,
+        "question": "httpsで使う暗号化方式で、共通鍵暗号と公開鍵暗号の組み合わせを何という？",
+        "answer": "SSL/TLS",
+        "alternativeAnswers": [
+            "SSL",
+            "TLS",
+            "エスエスエル"
+        ],
+        "note": ""
+    },
+    {
+        "number": 36,
+        "question": "データ同士を互いに関係付けて管理するDBを何という？",
+        "answer": "リレーショナルデータベース",
+        "alternativeAnswers": [
+            "RDB",
+            "関係データベース"
+        ],
+        "note": ""
+    },
+    {
+        "number": 37,
+        "question": "リレーショナルデータベースを操作するための言語を何という？",
+        "answer": "SQL",
+        "alternativeAnswers": [
+            "エスキューエル"
+        ],
+        "note": ""
+    },
+    {
+        "number": 38,
+        "question": "SQLで「表から条件にあった行を取り出す」操作を何という？",
+        "answer": "選択",
+        "alternativeAnswers": [
+            "SELECT",
+            "セレクト"
+        ],
+        "note": ""
+    },
+    {
+        "number": 39,
+        "question": "SQLで「表から必要なデータを指定して取り出す」操作を何という？",
+        "answer": "射影",
+        "alternativeAnswers": [
+            "プロジェクション"
+        ],
+        "note": ""
+    },
+    {
+        "number": 40,
+        "question": "SQLで「複数の表をまとめる」操作を何という？",
+        "answer": "結合",
+        "alternativeAnswers": [
+            "JOIN",
+            "ジョイン"
+        ],
+        "note": ""
+    },
+    {
+        "number": 41,
+        "question": "HTTP, SMTPが属するインターネットの階層は？",
+        "answer": "アプリケーション層",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 42,
+        "question": "TCPが属するインターネットの階層は？",
+        "answer": "トランスポート層",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 43,
+        "question": "IPが属するインターネットの階層は？",
+        "answer": "インターネット層",
+        "alternativeAnswers": [],
+        "note": ""
+    }
+]

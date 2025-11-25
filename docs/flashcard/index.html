@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>情報I 2学期期末 フラッシュカード</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ハンバーガーメニュー -->
+    <div class="hamburger-menu">
+        <button id="hamburger-btn" class="hamburger-btn" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div id="menu-content" class="menu-content">
+            <a href="learn.html">📖 学習モード</a>
+            <a href="test-select.html">✅ テスト（選択式）</a>
+            <a href="test-input.html">✏️ テスト（入力式）</a>
+            <hr class="menu-divider">
+            <a href="../index.html">📚 トップページ</a>
+            <a href="../s2-final.html">📝 2学期期末対策プリント</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>情報I 2学期期末<br>フラッシュカード</h1>
+
+        <div class="home-menu">
+            <a href="learn.html" class="home-card">
+                <div class="home-card-icon">📖</div>
+                <div class="home-card-title">学習モード</div>
+                <div class="home-card-desc">カードをめくって用語を覚えよう</div>
+            </a>
+
+            <a href="test-select.html" class="home-card">
+                <div class="home-card-icon">✅</div>
+                <div class="home-card-title">テストモード（選択式）</div>
+                <div class="home-card-desc">4つの選択肢から正解を選ぼう</div>
+            </a>
+
+            <a href="test-input.html" class="home-card">
+                <div class="home-card-icon">✏️</div>
+                <div class="home-card-title">テストモード（入力式）</div>
+                <div class="home-card-desc">答えを入力して確認しよう</div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // ハンバーガーメニューの開閉
+        function toggleMenu() {
+            const btn = document.getElementById('hamburger-btn');
+            const menu = document.getElementById('menu-content');
+            btn.classList.toggle('active');
+            menu.classList.toggle('show');
+        }
+
+        // メニュー外クリックで閉じる
+        document.addEventListener('click', function (event) {
+            const menu = document.getElementById('menu-content');
+            const btn = document.getElementById('hamburger-btn');
+
+            if (!menu.contains(event.target) && !btn.contains(event.target)) {
+                menu.classList.remove('show');
+                btn.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+
+</html>
