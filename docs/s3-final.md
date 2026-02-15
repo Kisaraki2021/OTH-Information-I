@@ -1,9 +1,9 @@
-# 情報I 2学期中間考査 対策プリント
+# 情報I 3学期学年末考査 対策プリント
 - 以下のテキストはCC-BY-SA 4.0の下で提供されます
 - ![CC-BY-SA-4.0-International](https://creativecommons.jp/wp-content/uploads/2015/04/by-sa.png?w=297)
 
 ## 印刷用
-- [赤シート対応版](./s3-final.html)を用意しました
+- [赤シート対応版](./s3-final-printout-orange.html)を用意しました
 
 ## 留意事項
 - これは学校公式のものではありません
