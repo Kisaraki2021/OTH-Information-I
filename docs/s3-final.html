@@ -1,54 +1,174 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>s3-final</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QN61849JJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  <link rel="stylesheet" href="css/doc-style.css" />
+    gtag('config', 'G-7QN61849JJ');
+  </script>
+  <title>s3-final</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet"
+    href="file:///c:\Users\yutoi\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.20\crossnote\dependencies\katex\katex.min.css">
 
   <style>
-    body {
+    html body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      font-size: 16px;
+      line-height: 1.6;
+      color: #000;
+      background: #fff;
+      padding: 16px;
       margin: 0;
-      padding: 24px;
-      font-family: system-ui, -apple-system, "Segoe UI", "Noto Sans JP", "Hiragino Sans", "Yu Gothic UI", sans-serif;
-      line-height: 1.7;
     }
 
-    main {
-      max-width: 900px;
-      margin: 0 auto;
+    html body img {
+      max-width: 100%;
+      height: auto;
     }
 
-    h1,
-    h2,
-    h3 {
-      line-height: 1.3;
+    html body code {
+      font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+      font-size: .85em;
+      color: #000;
+      background-color: #f0f0f0;
+      border-radius: 3px;
+      padding: .2em 0;
     }
 
-    code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    html body code::after,
+    html body code::before {
+      letter-spacing: -.2em;
+      content: '\00a0';
+    }
+
+    html body h1,
+    html body h2,
+    html body h3,
+    html body h4,
+    html body h5,
+    html body h6 {
+      font-weight: 600;
+      margin: 16px 0 12px 0;
+      page-break-after: avoid;
+    }
+
+    html body>p {
+      margin-top: 0;
+      margin-bottom: 16px;
+      word-wrap: break-word;
+    }
+
+    html body>ol,
+    html body>ul {
+      margin-bottom: 16px;
+    }
+
+    html body ol,
+    html body ul {
+      padding-left: 2em;
+    }
+
+    html body li {
+      margin-bottom: 0;
+    }
+
+    html body li>p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    html body hr {
+      height: 4px;
+      margin: 32px 0;
+      background-color: #d6d6d6;
+      border: 0 none;
+    }
+
+    html body blockquote {
+      margin: 16px 0;
+      font-size: inherit;
+      padding: 0 15px;
+      color: #5c5c5c;
+      background-color: #f0f0f0;
+      border-left: 4px solid #d6d6d6;
+    }
+
+    /* s2-final と同じ「強調はオレンジ」 */
+    html body strong {
+      color: #ff833c;
+    }
+
+    .markdown-preview {
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    /* A4印刷向け */
+    @page {
+      size: A4;
+      margin: 12mm;
     }
 
     @media print {
-      body {
+      html body {
         padding: 0;
       }
 
-      main {
-        max-width: none;
-        margin: 0;
+      html body img {
+        display: block;
+        max-width: 100%;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+    }
+
+    /* 画像サイズ調整（A4でちょうどよく） */
+    html body img.license-badge {
+      width: 55mm;
+      max-width: 70%;
+    }
+
+    html body img.flowchart-symbol {
+      width: 55mm;
+      max-width: 80%;
+      margin: 6px 0 10px 0;
+    }
+
+    @media print {
+      html body img.license-badge {
+        width: 50mm;
+      }
+
+      html body img.flowchart-symbol {
+        width: 45mm;
       }
     }
   </style>
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+      // your code here
+    });
+  </script>
 </head>
 
-<body>
-  <main>
+<body for="html-export">
+
+
+  <div class="crossnote markdown-preview">
+
     <h1>情報I 2学期中間考査 対策プリント</h1>
 
-    <h1>第5章 問題解決</h1>
+
+    <h2>第5章 問題解決</h2>
     <ul>
       <li>表計算ソフト(Excel)では <strong>=</strong> で数式を始める</li>
       <li><strong>算術演算子</strong>
@@ -58,24 +178,17 @@
       </li>
     </ul>
 
-    <h3>参照（コピーするとき超重要）</h3>
+    <h3>参照</h3>
     <ul>
       <li><strong>相対参照</strong>
         <ul>
           <li>コピーすると「同じ位置関係」でずれていく</li>
-          <li>例：<code>=A1</code> を右にコピー → <code>=B1</code> になる</li>
         </ul>
       </li>
       <li><strong>絶対参照</strong>
         <ul>
           <li>コピーしてもセルの場所がずれない（<code>$</code> を付ける）</li>
-          <li>例：<code>=$A$1</code> をどこにコピーしても <code>A1</code> のまま</li>
-        </ul>
-      </li>
-      <li><strong>複合参照（混合参照）</strong>
-        <ul>
-          <li>行だけ／列だけ固定する</li>
-          <li>例：<code>=$A1</code>（列A固定）、<code>=A$1</code>（行1固定）</li>
+          <li>行だけ／列だけ固定することもできる</li>
         </ul>
       </li>
     </ul>
@@ -86,13 +199,11 @@
         <ul>
           <li><code>=</code> の後ろに書く計算</li>
           <li>関数名の後ろの <code>()</code> の中に書いた <strong>引数（ひきすう）</strong> を使って計算し、<strong>戻り値</strong>を表示する</li>
-          <li>例：<code>=SUM(A1:A10)</code></li>
         </ul>
       </li>
       <li><strong>シミュレーション</strong>
         <ul>
           <li>条件（入力）を変えたとき結果がどう変わるかを試す使い方</li>
-          <li>綴り：simulation</li>
         </ul>
       </li>
     </ul>
@@ -112,10 +223,8 @@
       </li>
     </ul>
 
-    <h2>統計（表計算でよく使う統計量）</h2>
-    <p>※ Excelの関数は基本 <code>=</code> を付けて使う（例：<code>=AVERAGE(A1:A10)</code>）</p>
-
-    <h3>基本の統計量（代表的な関数）</h3>
+    <h3>統計</h3>
+    <h4>基本の統計量</h4>
     <ul>
       <li><strong>個数</strong>：<code>=COUNT(範囲)</code>（数値が入っているセルの個数）</li>
       <li><strong>合計値</strong>：<code>=SUM(範囲)</code></li>
@@ -123,43 +232,37 @@
       <li><strong>最小値</strong>：<code>=MIN(範囲)</code></li>
       <li><strong>平均値</strong>：<code>=AVERAGE(範囲)</code></li>
       <li><strong>中央値（メディアン）</strong>：<code>=MEDIAN(範囲)</code></li>
-      <li><strong>最頻値（モード）</strong>：<code>=MODE.SNGL(範囲)</code>（複数ある場合は <code>MODE.MULT</code>）</li>
+      <li><strong>最頻値（モード）</strong>：<code>=MODE.SNGL(範囲)</code></li>
     </ul>
 
-    <h3>四分位数・箱ひげ図で重要</h3>
+    <h4>四分位数・箱ひげ図で重要</h4>
     <ul>
       <li><strong>四分位数</strong>
         <ul>
-          <li>第1四分位数 Q1：データの下位25%の位置</li>
-          <li>第2四分位数 Q2：中央値</li>
-          <li>第3四分位数 Q3：データの下位75%の位置</li>
-          <li>Excel：<code>=QUARTILE.INC(範囲, 1)</code> / <code>=QUARTILE.INC(範囲, 2)</code> / <code>=QUARTILE.INC(範囲, 3)</code>
-            <ul>
-              <li>※ <code>QUARTILE.INC</code>（包含）と <code>QUARTILE.EXC</code>（排他的）があるので、授業で扱った方に合わせる</li>
-            </ul>
-          </li>
+          <li>第1四分位数 $Q_1$：データの下位25%の位置</li>
+          <li>第2四分位数 $Q_2$：中央値</li>
+          <li>第3四分位数 $Q_3$：データの下位75%の位置</li>
+          <li><code>=QUARTILE.INC(範囲, 1or2or3)</code></li>
         </ul>
       </li>
-      <li><strong>四分位範囲（IQR）</strong>：IQR = Q3 - Q1</li>
+      <li><strong>四分位範囲</strong>：$IQR = Q_3 - Q_1$</li>
     </ul>
 
-    <h3>ばらつき（分散・標準偏差）</h3>
+    <h4>ばらつき（分散・標準偏差）</h4>
     <ul>
       <li><strong>分散</strong>：平均からどれだけ散らばっているか（「平均との差」の二乗の平均）
         <ul>
-          <li>Excel（母分散）：<code>=VAR.P(範囲)</code></li>
-          <li>Excel（標本分散）：<code>=VAR.S(範囲)</code></li>
+          <li><code>=VAR.P(範囲)</code></li>
         </ul>
       </li>
-      <li><strong>標準偏差</strong>：分散の平方根（単位が元データと同じになる）
+      <li><strong>標準偏差</strong>：分散の平方根
         <ul>
-          <li>Excel（母標準偏差）：<code>=STDEV.P(範囲)</code></li>
-          <li>Excel（標本標準偏差）：<code>=STDEV.S(範囲)</code></li>
+          <li><code>=STDEV.P(範囲)</code></li>
         </ul>
       </li>
     </ul>
 
-    <h2>度数分布表・ヒストグラム・箱ひげ図</h2>
+    <h3>度数分布表・ヒストグラム・箱ひげ図</h3>
     <ul>
       <li><strong>度数分布表</strong>
         <ul>
@@ -169,45 +272,44 @@
       <li><strong>ヒストグラム</strong>
         <ul>
           <li>度数分布表を棒で表したグラフ（階級ごとの度数）</li>
-          <li>棒グラフとの違い：ヒストグラムは（基本）連続した範囲を扱うので棒が隙間なく並ぶ</li>
         </ul>
       </li>
       <li><strong>箱ひげ図</strong>
         <ul>
-          <li>中央値、四分位数、最大／最小（や外れ値）で分布の様子を表す</li>
-          <li>箱：Q1〜Q3、箱の中の線：中央値（Q2）</li>
+          <li>中央値、四分位数、最大／最小で分布の様子を表す</li>
+          <li>箱：$Q_1$〜$Q_3$、箱の中の線：中央値（$Q_2$）</li>
         </ul>
       </li>
     </ul>
 
-    <h2>尺度水準（データの種類）</h2>
+    <h3>尺度水準（データの種類）</h3>
     <ul>
-      <li><strong>質的データ</strong>（数の大小に意味がない／計算に向かないことが多い）
+      <li><strong>質的データ</strong>
         <ul>
-          <li><strong>名義尺度</strong>：分類だけ（例：血液型、都道府県、クラス）</li>
-          <li><strong>順序尺度</strong>：順番はあるが差の意味が一定でない（例：満足度1〜5、順位）</li>
+          <li><strong>名義尺度</strong>：分類のラベル（例：血液型、都道府県、クラス）</li>
+          <li><strong>順序尺度</strong>：順序性がある（例：満足度1〜5、順位）</li>
         </ul>
       </li>
-      <li><strong>量的データ</strong>（数の大小や差に意味がある）
+      <li><strong>量的データ</strong>
         <ul>
-          <li><strong>間隔尺度</strong>：差は意味があるが「0」が任意（例：気温℃）</li>
-          <li><strong>比例尺度</strong>：0に意味があり、比が意味を持つ（例：身長、重さ、時間）</li>
+          <li><strong>間隔尺度</strong>：差は意味がある（例：気温℃）</li>
+          <li><strong>比例尺度</strong>：比が意味を持つ（例：身長、重さ、時間）</li>
         </ul>
       </li>
     </ul>
 
-    <h2>時系列分析</h2>
+    <h3>時系列分析</h3>
     <ul>
       <li><strong>時系列データ</strong>：時間の順に並んだデータ（例：毎月の売上、日ごとの気温）</li>
-      <li><strong>平滑化</strong>：細かい上下動（ノイズ）をならして、傾向を見やすくする
+      <li><strong>平滑化</strong>：細かいずれをならして、傾向を見やすくする
         <ul>
-          <li><strong>移動平均法</strong>：直近k個の平均をとる</li>
-          <li><strong>移動中央値法</strong>：直近k個の中央値をとる（外れ値の影響を受けにくい）</li>
+          <li><strong>移動平均法</strong>：直近$k$個の平均をとる</li>
+          <li><strong>移動中央値法</strong>：直近$k$個の中央値をとる（外れ値の影響を受けにくい）</li>
         </ul>
       </li>
     </ul>
 
-    <h2>回帰分析</h2>
+    <h3>回帰分析</h3>
     <ul>
       <li><strong>回帰分析</strong>
         <ul>
@@ -218,28 +320,103 @@
       </li>
       <li><strong>最小二乗法</strong>
         <ul>
-          <li>予測値と実測値の差（残差）の二乗和が最小になるように回帰直線を決める方法</li>
-        </ul>
-      </li>
-      <li>Excelでよく見る関数（出題範囲なら）
-        <ul>
-          <li>傾き：<code>=SLOPE(yの範囲, xの範囲)</code></li>
-          <li>切片：<code>=INTERCEPT(yの範囲, xの範囲)</code></li>
-          <li>決定係数：<code>=RSQ(yの範囲, xの範囲)</code></li>
+          <li>予測値と実測値の差の二乗和が最小になるように回帰直線を決める方法</li>
         </ul>
       </li>
     </ul>
 
-    <h2>グラフの特徴（何を表すのに向く？）</h2>
+    <h3>グラフの特徴（何に向いているか）</h3>
     <ul>
       <li><strong>棒グラフ</strong>：カテゴリごとの量の比較</li>
-      <li><strong>折れ線グラフ</strong>：時間変化（時系列）の推移</li>
+      <li><strong>折れ線グラフ</strong>：時間変化の推移</li>
       <li><strong>円グラフ</strong>：全体に対する割合（カテゴリ数が多いと読みにくい）</li>
-      <li><strong>帯グラフ</strong>：割合の比較（複数の集団で構成比を比べやすい）</li>
+      <li><strong>帯グラフ</strong>：割合の比較（複数の集団で比べやすい）</li>
       <li><strong>レーダーチャート</strong>：複数観点の特徴（得意／不得意）を形で見る</li>
       <li><strong>散布図</strong>：2つの量の関係（相関・回帰の確認）</li>
     </ul>
-  </main>
+
+    <h2>第6章 アルゴリズムとプログラミング</h2>
+    <ul>
+      <li><strong>プログラム</strong>
+        <ul>
+          <li>コンピュータにさせたい処理を、決められた書き方（<strong>プログラミング言語</strong>）で書いたもの</li>
+          <li><strong>アルゴリズム</strong>をコンピュータで実行できる形にしたもの</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>エラーの種類</h3>
+    <ul>
+      <li><strong>構文エラー</strong>
+        <ul>
+          <li>書き方のルールが間違っている</li>
+        </ul>
+      </li>
+      <li><strong>実行時エラー</strong>
+        <ul>
+          <li>書き方は合っているが、実行中に止まる</li>
+          <li>例：0で割る、存在しないデータを使おうとする</li>
+        </ul>
+      </li>
+      <li><strong>論理エラー</strong>
+        <ul>
+          <li>実行はできるが、答えが間違う（考え方・条件分岐・式のミス）</li>
+          <li>例：<code>&gt;=</code> にすべきなのに <code>&gt;</code> にしてしまう</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>バグ・デバッグ</h3>
+    <ul>
+      <li><strong>バグ</strong>
+        <ul>
+          <li>プログラムの誤り</li>
+        </ul>
+      </li>
+      <li><strong>デバッグ</strong>
+        <ul>
+          <li>バグ（問題）を見つけて取り除く作業</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>プログラミング言語の分類（追加）</h3>
+    <ul>
+      <li><strong>表現方法</strong>
+        <ul>
+          <li><strong>テキストプログラミング</strong>：文字で命令を書く</li>
+          <li><strong>ビジュアルプログラミング</strong>：ブロック等を組み合わせる</li>
+        </ul>
+      </li>
+      <li><strong>実行場所</strong>
+        <ul>
+          <li><strong>クライアントサイド</strong>：利用者の端末(クライアント)で動く</li>
+          <li><strong>サーバーサイド</strong>：サーバーで動く</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>フローチャート</h3>
+    <ul>
+      <li>端子
+        <p><img class="flowchart-symbol" alt="端子" src="image.png"></p>
+      </li>
+      <li>処理
+        <p><img class="flowchart-symbol" alt="処理" src="image-1.png"></p>
+      </li>
+      <li>判断
+        <p><img class="flowchart-symbol" alt="判断" src="image-2.png"></p>
+      </li>
+      <li>ループ端
+        <p><img class="flowchart-symbol" alt="ループ上" src="image-3.png"></p>
+        <p><img class="flowchart-symbol" alt="ループ下" src="image-4.png"></p>
+      </li>
+      <li>線
+        <p><img class="flowchart-symbol" alt="線" src="image-5.png"></p>
+      </li>
+    </ul>
+
+  </div>
 </body>
 
 </html>
