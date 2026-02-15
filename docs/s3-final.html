@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>s3-final</title>
+
+  <link rel="stylesheet" href="css/doc-style.css" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 24px;
+      font-family: system-ui, -apple-system, "Segoe UI", "Noto Sans JP", "Hiragino Sans", "Yu Gothic UI", sans-serif;
+      line-height: 1.7;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.3;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+      }
+
+      main {
+        max-width: none;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>情報I 2学期中間考査 対策プリント</h1>
+
+    <h1>第5章 問題解決</h1>
+    <ul>
+      <li>表計算ソフト(Excel)では <strong>=</strong> で数式を始める</li>
+      <li><strong>算術演算子</strong>
+        <ul>
+          <li><strong>+</strong>, <strong>-</strong>, <strong>*</strong>, <strong>/</strong> のこと（足し算／引き算／掛け算／割り算）</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>参照（コピーするとき超重要）</h3>
+    <ul>
+      <li><strong>相対参照</strong>
+        <ul>
+          <li>コピーすると「同じ位置関係」でずれていく</li>
+          <li>例：<code>=A1</code> を右にコピー → <code>=B1</code> になる</li>
+        </ul>
+      </li>
+      <li><strong>絶対参照</strong>
+        <ul>
+          <li>コピーしてもセルの場所がずれない（<code>$</code> を付ける）</li>
+          <li>例：<code>=$A$1</code> をどこにコピーしても <code>A1</code> のまま</li>
+        </ul>
+      </li>
+      <li><strong>複合参照（混合参照）</strong>
+        <ul>
+          <li>行だけ／列だけ固定する</li>
+          <li>例：<code>=$A1</code>（列A固定）、<code>=A$1</code>（行1固定）</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>関数</h3>
+    <ul>
+      <li><strong>関数</strong>
+        <ul>
+          <li><code>=</code> の後ろに書く計算</li>
+          <li>関数名の後ろの <code>()</code> の中に書いた <strong>引数（ひきすう）</strong> を使って計算し、<strong>戻り値</strong>を表示する</li>
+          <li>例：<code>=SUM(A1:A10)</code></li>
+        </ul>
+      </li>
+      <li><strong>シミュレーション</strong>
+        <ul>
+          <li>条件（入力）を変えたとき結果がどう変わるかを試す使い方</li>
+          <li>綴り：simulation</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>並べ替え・抽出</h3>
+    <ul>
+      <li><strong>並べ替え</strong>
+        <ul>
+          <li><strong>昇順</strong>：値の小さい順</li>
+          <li><strong>降順</strong>：値の大きい順</li>
+        </ul>
+      </li>
+      <li><strong>抽出</strong>
+        <ul>
+          <li><strong>フィルター</strong>機能を使って必要なデータだけ取り出す作業</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>統計（表計算でよく使う統計量）</h2>
+    <p>※ Excelの関数は基本 <code>=</code> を付けて使う（例：<code>=AVERAGE(A1:A10)</code>）</p>
+
+    <h3>基本の統計量（代表的な関数）</h3>
+    <ul>
+      <li><strong>個数</strong>：<code>=COUNT(範囲)</code>（数値が入っているセルの個数）</li>
+      <li><strong>合計値</strong>：<code>=SUM(範囲)</code></li>
+      <li><strong>最大値</strong>：<code>=MAX(範囲)</code></li>
+      <li><strong>最小値</strong>：<code>=MIN(範囲)</code></li>
+      <li><strong>平均値</strong>：<code>=AVERAGE(範囲)</code></li>
+      <li><strong>中央値（メディアン）</strong>：<code>=MEDIAN(範囲)</code></li>
+      <li><strong>最頻値（モード）</strong>：<code>=MODE.SNGL(範囲)</code>（複数ある場合は <code>MODE.MULT</code>）</li>
+    </ul>
+
+    <h3>四分位数・箱ひげ図で重要</h3>
+    <ul>
+      <li><strong>四分位数</strong>
+        <ul>
+          <li>第1四分位数 Q1：データの下位25%の位置</li>
+          <li>第2四分位数 Q2：中央値</li>
+          <li>第3四分位数 Q3：データの下位75%の位置</li>
+          <li>Excel：<code>=QUARTILE.INC(範囲, 1)</code> / <code>=QUARTILE.INC(範囲, 2)</code> / <code>=QUARTILE.INC(範囲, 3)</code>
+            <ul>
+              <li>※ <code>QUARTILE.INC</code>（包含）と <code>QUARTILE.EXC</code>（排他的）があるので、授業で扱った方に合わせる</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><strong>四分位範囲（IQR）</strong>：IQR = Q3 - Q1</li>
+    </ul>
+
+    <h3>ばらつき（分散・標準偏差）</h3>
+    <ul>
+      <li><strong>分散</strong>：平均からどれだけ散らばっているか（「平均との差」の二乗の平均）
+        <ul>
+          <li>Excel（母分散）：<code>=VAR.P(範囲)</code></li>
+          <li>Excel（標本分散）：<code>=VAR.S(範囲)</code></li>
+        </ul>
+      </li>
+      <li><strong>標準偏差</strong>：分散の平方根（単位が元データと同じになる）
+        <ul>
+          <li>Excel（母標準偏差）：<code>=STDEV.P(範囲)</code></li>
+          <li>Excel（標本標準偏差）：<code>=STDEV.S(範囲)</code></li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>度数分布表・ヒストグラム・箱ひげ図</h2>
+    <ul>
+      <li><strong>度数分布表</strong>
+        <ul>
+          <li>値の範囲（階級）ごとに「いくつあるか（度数）」をまとめた表</li>
+        </ul>
+      </li>
+      <li><strong>ヒストグラム</strong>
+        <ul>
+          <li>度数分布表を棒で表したグラフ（階級ごとの度数）</li>
+          <li>棒グラフとの違い：ヒストグラムは（基本）連続した範囲を扱うので棒が隙間なく並ぶ</li>
+        </ul>
+      </li>
+      <li><strong>箱ひげ図</strong>
+        <ul>
+          <li>中央値、四分位数、最大／最小（や外れ値）で分布の様子を表す</li>
+          <li>箱：Q1〜Q3、箱の中の線：中央値（Q2）</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>尺度水準（データの種類）</h2>
+    <ul>
+      <li><strong>質的データ</strong>（数の大小に意味がない／計算に向かないことが多い）
+        <ul>
+          <li><strong>名義尺度</strong>：分類だけ（例：血液型、都道府県、クラス）</li>
+          <li><strong>順序尺度</strong>：順番はあるが差の意味が一定でない（例：満足度1〜5、順位）</li>
+        </ul>
+      </li>
+      <li><strong>量的データ</strong>（数の大小や差に意味がある）
+        <ul>
+          <li><strong>間隔尺度</strong>：差は意味があるが「0」が任意（例：気温℃）</li>
+          <li><strong>比例尺度</strong>：0に意味があり、比が意味を持つ（例：身長、重さ、時間）</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>時系列分析</h2>
+    <ul>
+      <li><strong>時系列データ</strong>：時間の順に並んだデータ（例：毎月の売上、日ごとの気温）</li>
+      <li><strong>平滑化</strong>：細かい上下動（ノイズ）をならして、傾向を見やすくする
+        <ul>
+          <li><strong>移動平均法</strong>：直近k個の平均をとる</li>
+          <li><strong>移動中央値法</strong>：直近k個の中央値をとる（外れ値の影響を受けにくい）</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>回帰分析</h2>
+    <ul>
+      <li><strong>回帰分析</strong>
+        <ul>
+          <li>データの関係を <strong>モデル関数</strong>（式）で表すこと</li>
+          <li>一次関数で近似するのが <strong>直線回帰</strong>、その直線が <strong>回帰直線</strong></li>
+          <li><strong>散布図</strong>で関係を確認してから使うことが多い</li>
+        </ul>
+      </li>
+      <li><strong>最小二乗法</strong>
+        <ul>
+          <li>予測値と実測値の差（残差）の二乗和が最小になるように回帰直線を決める方法</li>
+        </ul>
+      </li>
+      <li>Excelでよく見る関数（出題範囲なら）
+        <ul>
+          <li>傾き：<code>=SLOPE(yの範囲, xの範囲)</code></li>
+          <li>切片：<code>=INTERCEPT(yの範囲, xの範囲)</code></li>
+          <li>決定係数：<code>=RSQ(yの範囲, xの範囲)</code></li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>グラフの特徴（何を表すのに向く？）</h2>
+    <ul>
+      <li><strong>棒グラフ</strong>：カテゴリごとの量の比較</li>
+      <li><strong>折れ線グラフ</strong>：時間変化（時系列）の推移</li>
+      <li><strong>円グラフ</strong>：全体に対する割合（カテゴリ数が多いと読みにくい）</li>
+      <li><strong>帯グラフ</strong>：割合の比較（複数の集団で構成比を比べやすい）</li>
+      <li><strong>レーダーチャート</strong>：複数観点の特徴（得意／不得意）を形で見る</li>
+      <li><strong>散布図</strong>：2つの量の関係（相関・回帰の確認）</li>
+    </ul>
+  </main>
+</body>
+
+</html>
