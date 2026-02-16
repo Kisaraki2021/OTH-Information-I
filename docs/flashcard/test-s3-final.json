@@ -157,7 +157,9 @@
         "answer": "MODE.SNGL",
         "alternativeAnswers": [
             "MODE.SNGL関数",
-            "=MODE.SNGL"
+            "=MODE.SNGL",
+            "MODE",
+            "=MODE"
         ],
         "note": ""
     },
@@ -342,153 +344,72 @@
     },
     {
         "number": 43,
-        "question": "カテゴリごとの量の比較に向くグラフは？",
-        "answer": "棒グラフ",
-        "alternativeAnswers": [],
-        "note": ""
-    },
-    {
-        "number": 44,
-        "question": "時間変化の推移に向くグラフは？",
-        "answer": "折れ線グラフ",
-        "alternativeAnswers": [],
-        "note": ""
-    },
-    {
-        "number": 45,
-        "question": "全体に対する割合を表すのに向くグラフは？",
-        "answer": "円グラフ",
-        "alternativeAnswers": [],
-        "note": "カテゴリが多いと読みにくい"
-    },
-    {
-        "number": 46,
-        "question": "割合の比較（複数集団で比べやすい）に向くグラフは？",
-        "answer": "帯グラフ",
-        "alternativeAnswers": [],
-        "note": ""
-    },
-    {
-        "number": 47,
-        "question": "複数観点の特徴を形で見るのに向くグラフは？",
-        "answer": "レーダーチャート",
-        "alternativeAnswers": [
-            "レーダー図"
-        ],
-        "note": ""
-    },
-    {
-        "number": 48,
-        "question": "2つの量の関係（相関・回帰）を確認するのに向くグラフは？",
-        "answer": "散布図",
-        "alternativeAnswers": [],
-        "note": ""
-    },
-    {
-        "number": 49,
         "question": "コンピュータにさせたい処理をプログラミング言語で書いたものを何という？",
         "answer": "プログラム",
         "alternativeAnswers": [],
         "note": ""
     },
     {
-        "number": 50,
+        "number": 44,
         "question": "書き方のルールが間違っているエラーを何という？",
         "answer": "構文エラー",
         "alternativeAnswers": [],
         "note": ""
     },
     {
-        "number": 51,
+        "number": 45,
         "question": "実行中に止まるエラー（例：0で割る）を何という？",
         "answer": "実行時エラー",
         "alternativeAnswers": [],
         "note": ""
     },
     {
-        "number": 52,
+        "number": 46,
         "question": "実行はできるが答えが間違うエラーを何という？",
         "answer": "論理エラー",
         "alternativeAnswers": [],
         "note": ""
     },
     {
-        "number": 53,
+        "number": 47,
         "question": "プログラムの誤りを何という？",
         "answer": "バグ",
         "alternativeAnswers": [],
         "note": ""
     },
     {
-        "number": 54,
+        "number": 48,
         "question": "バグを見つけて取り除く作業を何という？",
         "answer": "デバッグ",
         "alternativeAnswers": [],
         "note": ""
     },
     {
-        "number": 55,
+        "number": 49,
         "question": "文字で命令を書くプログラミングを何という？",
         "answer": "テキストプログラミング",
         "alternativeAnswers": [],
         "note": ""
     },
     {
-        "number": 56,
+        "number": 50,
         "question": "ブロック等を組み合わせるプログラミングを何という？",
         "answer": "ビジュアルプログラミング",
         "alternativeAnswers": [],
         "note": ""
     },
     {
-        "number": 57,
+        "number": 51,
         "question": "利用者の端末（クライアント）で動く実行場所を何という？",
         "answer": "クライアントサイド",
         "alternativeAnswers": [],
         "note": ""
     },
     {
-        "number": 58,
+        "number": 52,
         "question": "サーバーで動く実行場所を何という？",
         "answer": "サーバーサイド",
         "alternativeAnswers": [],
-        "note": ""
-    },
-    {
-        "number": 59,
-        "question": "フローチャートで開始・終了を表す記号を何という？",
-        "answer": "端子",
-        "alternativeAnswers": [],
-        "note": ""
-    },
-    {
-        "number": 60,
-        "question": "フローチャートで処理（計算など）を表す記号を何という？",
-        "answer": "処理",
-        "alternativeAnswers": [],
-        "note": ""
-    },
-    {
-        "number": 61,
-        "question": "フローチャートで条件分岐を表す記号を何という？",
-        "answer": "判断",
-        "alternativeAnswers": [],
-        "note": ""
-    },
-    {
-        "number": 62,
-        "question": "フローチャートでループの始まり/終わりを表す記号を何という？",
-        "answer": "ループ端",
-        "alternativeAnswers": [],
-        "note": ""
-    },
-    {
-        "number": 63,
-        "question": "フローチャートで処理の流れをつなぐものを何という？",
-        "answer": "線",
-        "alternativeAnswers": [
-            "矢印"
-        ],
         "note": ""
     }
 ]
