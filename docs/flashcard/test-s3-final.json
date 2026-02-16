@@ -1,0 +1,494 @@
+[
+    {
+        "number": 1,
+        "question": "表計算ソフト(Excel)で数式を始めるとき最初に書く記号は？",
+        "answer": "=",
+        "alternativeAnswers": [
+            "＝"
+        ],
+        "note": ""
+    },
+    {
+        "number": 2,
+        "question": "足し算／引き算／掛け算／割り算に使う演算子（+, -, *, /）を何という？",
+        "answer": "算術演算子",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 3,
+        "question": "コピーすると同じ位置関係で参照先がずれていく参照を何という？",
+        "answer": "相対参照",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 4,
+        "question": "コピーしても参照先のセル位置がずれない参照を何という？",
+        "answer": "絶対参照",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 5,
+        "question": "表計算で絶対参照を指定するときに付ける記号は？",
+        "answer": "$",
+        "alternativeAnswers": [],
+        "note": "例：$A$1"
+    },
+    {
+        "number": 6,
+        "question": "関数名の後ろの( )の中に書くものを何という？",
+        "answer": "引数",
+        "alternativeAnswers": [
+            "ひきすう"
+        ],
+        "note": ""
+    },
+    {
+        "number": 7,
+        "question": "関数が計算結果として返す値を何という？",
+        "answer": "戻り値",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 8,
+        "question": "条件（入力）を変えたとき、結果がどう変わるかを試す使い方を何という？",
+        "answer": "シミュレーション",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 9,
+        "question": "データを小さい順・大きい順などに並べ直すことを何という？",
+        "answer": "並べ替え",
+        "alternativeAnswers": [
+            "ソート"
+        ],
+        "note": ""
+    },
+    {
+        "number": 10,
+        "question": "並べ替えで、値の小さい順を何という？",
+        "answer": "昇順",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 11,
+        "question": "並べ替えで、値の大きい順を何という？",
+        "answer": "降順",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 12,
+        "question": "フィルター機能などで必要なデータだけ取り出す作業を何という？",
+        "answer": "抽出",
+        "alternativeAnswers": [
+            "フィルタリング"
+        ],
+        "note": ""
+    },
+    {
+        "number": 13,
+        "question": "数値が入っているセルの個数を数える関数は？",
+        "answer": "COUNT",
+        "alternativeAnswers": [
+            "COUNT関数",
+            "=COUNT"
+        ],
+        "note": ""
+    },
+    {
+        "number": 14,
+        "question": "合計値を求める関数は？",
+        "answer": "SUM",
+        "alternativeAnswers": [
+            "SUM関数",
+            "=SUM"
+        ],
+        "note": ""
+    },
+    {
+        "number": 15,
+        "question": "最大値を求める関数は？",
+        "answer": "MAX",
+        "alternativeAnswers": [
+            "MAX関数",
+            "=MAX"
+        ],
+        "note": ""
+    },
+    {
+        "number": 16,
+        "question": "最小値を求める関数は？",
+        "answer": "MIN",
+        "alternativeAnswers": [
+            "MIN関数",
+            "=MIN"
+        ],
+        "note": ""
+    },
+    {
+        "number": 17,
+        "question": "平均値を求める関数は？",
+        "answer": "AVERAGE",
+        "alternativeAnswers": [
+            "AVERAGE関数",
+            "=AVERAGE"
+        ],
+        "note": ""
+    },
+    {
+        "number": 18,
+        "question": "中央値（メディアン）を求める関数は？",
+        "answer": "MEDIAN",
+        "alternativeAnswers": [
+            "MEDIAN関数",
+            "=MEDIAN"
+        ],
+        "note": ""
+    },
+    {
+        "number": 19,
+        "question": "最頻値（モード）を求める関数は？",
+        "answer": "MODE.SNGL",
+        "alternativeAnswers": [
+            "MODE.SNGL関数",
+            "=MODE.SNGL"
+        ],
+        "note": ""
+    },
+    {
+        "number": 20,
+        "question": "データの下位25%の位置を表す四分位数を何という？",
+        "answer": "第1四分位数",
+        "alternativeAnswers": [
+            "Q1"
+        ],
+        "note": ""
+    },
+    {
+        "number": 21,
+        "question": "中央値にあたる四分位数（第2四分位数）を何という？",
+        "answer": "中央値",
+        "alternativeAnswers": [
+            "第2四分位数",
+            "Q2",
+            "メディアン"
+        ],
+        "note": ""
+    },
+    {
+        "number": 22,
+        "question": "データの下位75%の位置を表す四分位数を何という？",
+        "answer": "第3四分位数",
+        "alternativeAnswers": [
+            "Q3"
+        ],
+        "note": ""
+    },
+    {
+        "number": 23,
+        "question": "四分位数を求める関数（=QUARTILE.INC(範囲, 1/2/3)）は？",
+        "answer": "QUARTILE.INC",
+        "alternativeAnswers": [
+            "QUARTILE"
+        ],
+        "note": ""
+    },
+    {
+        "number": 24,
+        "question": "平均との差の二乗の平均で、平均からの散らばり具合を表すものを何という？",
+        "answer": "分散",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 25,
+        "question": "分散の平方根を何という？",
+        "answer": "標準偏差",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 26,
+        "question": "分散を求める関数（=VAR.P(範囲)）は？",
+        "answer": "VAR.P",
+        "alternativeAnswers": [
+            "VAR",
+            "VAR.P関数",
+            "=VAR.P"
+        ],
+        "note": ""
+    },
+    {
+        "number": 27,
+        "question": "標準偏差を求める関数（=STDEV.P(範囲)）は？",
+        "answer": "STDEV.P",
+        "alternativeAnswers": [
+            "STDEV",
+            "STDEV.P関数",
+            "=STDEV.P"
+        ],
+        "note": ""
+    },
+    {
+        "number": 28,
+        "question": "値の範囲（階級）ごとに度数をまとめた表を何という？",
+        "answer": "度数分布表",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 29,
+        "question": "度数分布表を棒で表したグラフを何という？",
+        "answer": "ヒストグラム",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 30,
+        "question": "中央値・四分位数・最大/最小で分布を表すグラフを何という？",
+        "answer": "箱ひげ図",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 31,
+        "question": "質的データのうち、分類ラベル（血液型など）の尺度を何という？",
+        "answer": "名義尺度",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 32,
+        "question": "質的データのうち、順序性がある尺度（順位など）を何という？",
+        "answer": "順序尺度",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 33,
+        "question": "量的データのうち、差は意味があるが比は意味しにくい尺度（気温℃など）を何という？",
+        "answer": "間隔尺度",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 34,
+        "question": "量的データのうち、比が意味を持つ尺度（身長など）を何という？",
+        "answer": "比例尺度",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 35,
+        "question": "時間の順に並んだデータを何という？",
+        "answer": "時系列データ",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 36,
+        "question": "細かいずれをならして傾向を見やすくすることを何という？",
+        "answer": "平滑化",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 37,
+        "question": "直近n個の平均をとる平滑化手法を何という？",
+        "answer": "移動平均法",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 38,
+        "question": "直近n個の中央値をとる平滑化手法を何という？",
+        "answer": "移動中央値法",
+        "alternativeAnswers": [],
+        "note": "外れ値の影響を受けにくい"
+    },
+    {
+        "number": 39,
+        "question": "データの関係をモデル関数（式）で表すことを何という？",
+        "answer": "回帰分析",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 40,
+        "question": "一次関数で近似する回帰分析を何という？",
+        "answer": "直線回帰",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 41,
+        "question": "直線回帰で得られる近似直線を何という？",
+        "answer": "回帰直線",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 42,
+        "question": "予測値と実測値の差の二乗和が最小になるように回帰直線を決める方法を何という？",
+        "answer": "最小二乗法",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 43,
+        "question": "カテゴリごとの量の比較に向くグラフは？",
+        "answer": "棒グラフ",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 44,
+        "question": "時間変化の推移に向くグラフは？",
+        "answer": "折れ線グラフ",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 45,
+        "question": "全体に対する割合を表すのに向くグラフは？",
+        "answer": "円グラフ",
+        "alternativeAnswers": [],
+        "note": "カテゴリが多いと読みにくい"
+    },
+    {
+        "number": 46,
+        "question": "割合の比較（複数集団で比べやすい）に向くグラフは？",
+        "answer": "帯グラフ",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 47,
+        "question": "複数観点の特徴を形で見るのに向くグラフは？",
+        "answer": "レーダーチャート",
+        "alternativeAnswers": [
+            "レーダー図"
+        ],
+        "note": ""
+    },
+    {
+        "number": 48,
+        "question": "2つの量の関係（相関・回帰）を確認するのに向くグラフは？",
+        "answer": "散布図",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 49,
+        "question": "コンピュータにさせたい処理をプログラミング言語で書いたものを何という？",
+        "answer": "プログラム",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 50,
+        "question": "書き方のルールが間違っているエラーを何という？",
+        "answer": "構文エラー",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 51,
+        "question": "実行中に止まるエラー（例：0で割る）を何という？",
+        "answer": "実行時エラー",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 52,
+        "question": "実行はできるが答えが間違うエラーを何という？",
+        "answer": "論理エラー",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 53,
+        "question": "プログラムの誤りを何という？",
+        "answer": "バグ",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 54,
+        "question": "バグを見つけて取り除く作業を何という？",
+        "answer": "デバッグ",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 55,
+        "question": "文字で命令を書くプログラミングを何という？",
+        "answer": "テキストプログラミング",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 56,
+        "question": "ブロック等を組み合わせるプログラミングを何という？",
+        "answer": "ビジュアルプログラミング",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 57,
+        "question": "利用者の端末（クライアント）で動く実行場所を何という？",
+        "answer": "クライアントサイド",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 58,
+        "question": "サーバーで動く実行場所を何という？",
+        "answer": "サーバーサイド",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 59,
+        "question": "フローチャートで開始・終了を表す記号を何という？",
+        "answer": "端子",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 60,
+        "question": "フローチャートで処理（計算など）を表す記号を何という？",
+        "answer": "処理",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 61,
+        "question": "フローチャートで条件分岐を表す記号を何という？",
+        "answer": "判断",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 62,
+        "question": "フローチャートでループの始まり/終わりを表す記号を何という？",
+        "answer": "ループ端",
+        "alternativeAnswers": [],
+        "note": ""
+    },
+    {
+        "number": 63,
+        "question": "フローチャートで処理の流れをつなぐものを何という？",
+        "answer": "線",
+        "alternativeAnswers": [
+            "矢印"
+        ],
+        "note": ""
+    }
+]
