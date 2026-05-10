@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QN61849JJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-7QN61849JJ');
+  </script>
+  <title>情報I 1学期期末考査 対策プリント</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet"
+    href="file:///c:\Users\yutoi\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.20\crossnote\dependencies\katex\katex.min.css">
+
+  <style>
+    html body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      font-size: 16px;
+      line-height: 1.6;
+      color: #000;
+      background: #fff;
+      padding: 16px;
+      margin: 0;
+    }
+
+    html body img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    html body code {
+      font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+      font-size: .85em;
+      color: #000;
+      background-color: #f0f0f0;
+      border-radius: 3px;
+      padding: .2em 0;
+    }
+
+    html body code::after,
+    html body code::before {
+      letter-spacing: -.2em;
+      content: '\00a0';
+    }
+
+    html body h1,
+    html body h2,
+    html body h3,
+    html body h4,
+    html body h5,
+    html body h6 {
+      font-weight: 600;
+      margin: 16px 0 12px 0;
+      page-break-after: avoid;
+    }
+
+    html body>p {
+      margin-top: 0;
+      margin-bottom: 16px;
+      word-wrap: break-word;
+    }
+
+    html body>ol,
+    html body>ul {
+      margin-bottom: 16px;
+    }
+
+    html body ol,
+    html body ul {
+      padding-left: 2em;
+    }
+
+    html body li {
+      margin-bottom: 0;
+    }
+
+    html body li>p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    html body hr {
+      height: 4px;
+      margin: 32px 0;
+      background-color: #d6d6d6;
+      border: 0 none;
+    }
+
+    html body blockquote {
+      margin: 16px 0;
+      font-size: inherit;
+      padding: 0 15px;
+      color: #5c5c5c;
+      background-color: #f0f0f0;
+      border-left: 4px solid #d6d6d6;
+    }
+
+    /* s2-final と同じ「強調はオレンジ」 */
+    html body strong {
+      color: #ff833c;
+    }
+
+    .markdown-preview {
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    /* A4印刷向け */
+    @page {
+      size: A4;
+      margin: 12mm;
+    }
+
+    @media print {
+      html body {
+        padding: 0;
+      }
+
+      html body img {
+        display: block;
+        max-width: 100%;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+    }
+
+    /* 画像サイズ調整（A4でちょうどよく） */
+    html body img.license-badge {
+      width: 55mm;
+      max-width: 70%;
+    }
+
+    html body img.flowchart-symbol {
+      width: 55mm;
+      max-width: 80%;
+      margin: 6px 0 10px 0;
+    }
+
+    @media print {
+      html body img.license-badge {
+        width: 50mm;
+      }
+
+      html body img.flowchart-symbol {
+        width: 45mm;
+      }
+    }
+  </style>
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+      // your code here
+    });
+  </script>
+</head>
+
+<body for="html-export">
+
+  <div class="crossnote markdown-preview">
+
+<h1>情報I 1学期期末考査 対策プリント</h1>
+
+<h1>10進数・2進数・16進数 変換表</h1>
+<ul>
+<li>10進数・2進数・16進数の問題が出たときはこの表を書きましょう</li>
+</ul>
+<p>| 10進数 | 2進数 | 16進数 |</p>
+<p>|----|------|---|</p>
+<p>| 0  | 0000 | 0 |</p>
+<p>| 1  | 0001 | 1 |</p>
+<p>| 2  | 0010 | 2 |</p>
+<p>| 3  | 0011 | 3 |</p>
+<p>| 4  | 0100 | 4 |</p>
+<p>| 5  | 0101 | 5 |</p>
+<p>| 6  | 0110 | 6 |</p>
+<p>| 7  | 0111 | 7 |</p>
+<p>| 8  | 1000 | 8 |</p>
+<p>| 9  | 1001 | 9 |</p>
+<p>| 10 | 1010 | A |</p>
+<p>| 11 | 1011 | B |</p>
+<p>| 12 | 1100 | C |</p>
+<p>| 13 | 1101 | D |</p>
+<p>| 14 | 1110 | E |</p>
+<p>| 15 | 1111 | F |</p>
+
+<hr>
+<hr>
+
+<h1>プリント (補数)</h1>
+<ul>
+<li>コンピューターで負の数を表現する場合、<strong>補数</strong>を利用する</li>
+<li>定義</li>
+<li>足すと1桁増える最も小さな数</li>
+<li>n進法の補数をnの補数と呼ぶ</li>
+<li>計算方法 (2進数の場合)</li>
+</ul>
+<p>        1. <code>0</code>と<code>1</code>を反転させる</p>
+<p>        2. 反転したものに1を足す</p>
+<ul>
+<li>計算例 <code>3₁₀</code>の2進数3ビット</li>
+<li><code>3₁₀</code> = <code>011₂</code></li>
+<li><code>011</code>の<code>0</code>と<code>1</code>を入れ替えて<code>100</code>にする</li>
+<li><code>100</code> + <code>1</code> = <code>101</code></li>
+<li>数値をコンピューターのビットで表す時、あらかじめ決められたビットの長さをビット長という</li>
+<li>その際、正負を表すために最上位の桁を符号ビットとし、<code>0</code>で正、<code>1</code>で負を表す</li>
+<li>計算の際、ビット長を超えた場合、超えた部分は消滅する</li>
+<li>補数を用いたnビットの2進数で表現できる整数の範囲は <code>-2ⁿ⁻¹ ~ 2ⁿ⁻¹ - 1</code>である</li>
+</ul>
+<hr>
+<h1>プリント (実数)</h1>
+<ul>
+<li>10進数と2進数の変換 (小数)</li>
+<li>計算方法</li>
+</ul>
+<p>        1. 小数部分に2を掛けて繰り上がった整数を順に取り出していく</p>
+<p>        2. 小数部分が0になるまで繰り返す</p>
+<p>        3. 取り出した整数(0と1)が2進数の小数部分になる</p>
+<ul>
+<li>例 (<code>0.625₁₀</code>)</li>
+</ul>
+<p>        1. 2を掛けて整数部分を順に取り出していく</p>
+<ul>
+<li><code>0.625</code> × <code>2</code> = <code>1.25</code>　→ 整数部分 <code>1</code></li>
+<li><code>0.25</code> × <code>2</code> = <code>0.5</code>　 → 整数部分 <code>0</code></li>
+<li><code>0.5</code> × <code>2</code> = <code>1.</code>　 → 整数部分 <code>1</code></li>
+</ul>
+<p>        2. ここで小数部分が<code>0</code>になったので終了</p>
+<p>        3. 答えは<code>0.101₂</code></p>
+<ul>
+<li>実数の表現</li>
+<li><strong>固定小数点数</strong></li>
+<li>小数点の位置を固定</li>
+<li><strong>浮動小数点数</strong></li>
+<li>小数点の位置が移動</li>
+<li>コンピューターではこちらを使う</li>
+<li><strong>IEEE754</strong>という規格が定められている</li>
+<li>浮動小数点数の計算 (IEEE754)</li>
+<li><strong>符号部</strong> S : 符号(+, -)を表す</li>
+<li><strong>指数部</strong> E : 小数点の位置を表す</li>
+<li><strong>仮数部</strong> M : 実際の数字を表す</li>
+<li><strong>(-1)&lt;sup&gt;s&lt;/sup&gt; × 1.M × 2&lt;sup&gt;E-127&lt;/sup&gt;</strong></li>
+<li>実際の計算</li>
+</ul>
+<p>            1. 与えられた10進数を2進数に変換</p>
+<p>            2. 上の浮動小数点数の式の形に変形 (この作業を<strong>正規化</strong>と呼ぶ)</p>
+<ul>
+<li>この時、指数部はE-127の形にすることに注意</li>
+</ul>
+<p>            3. Eを2進数に変換</p>
+<p>            4. S(1桁)、E(8桁)、M(23桁)を順に下の表に書く</p>
+<ul>
+<li>Mは左詰めにし、余ったところは0を書く</li>
+</ul>
+<p>!<a href="resources/bit_table.png">alt text</a></p>
+
+<hr>
+<h1>プリント (論理回路)</h1>
+<ul>
+<li>コンピューターは0と1の2種類の信号で処理をする</li>
+<li>その演算や制御をする回路を<strong>論理回路</strong>という</li>
+<li><strong>論理積(AND)回路</strong></li>
+<li><strong>論理積(OR)回路</strong></li>
+<li><strong>否定(NOT)回路</strong></li>
+</ul>
+<p>    で全ての回路を表現できる</p>
+<ul>
+<li>論理回路の入力と出力の関係表を<strong>真理値表</strong>という</li>
+</ul>
+<h3>AND（論理積）</h3>
+<ul>
+<li>両方が1のときだけ1を出力</li>
+</ul>
+<p>| A | B | A AND B |</p>
+<p>|---|---|----------|</p>
+<p>| 0 | 0 |    0     |</p>
+<p>| 0 | 1 |    0     |</p>
+<p>| 1 | 0 |    0     |</p>
+<p>| 1 | 1 |    1     |</p>
+
+<p>&lt;img src="./resources/AND.png" width="50%"&gt;</p>
+
+<h3>OR（論理和）</h3>
+<ul>
+<li>片方でも1なら1を出力</li>
+</ul>
+<p>| A | B | A OR B |</p>
+<p>|---|---|---------|</p>
+<p>| 0 | 0 |   0     |</p>
+<p>| 0 | 1 |   1     |</p>
+<p>| 1 | 0 |   1     |</p>
+<p>| 1 | 1 |   1     |</p>
+
+<p>&lt;img src="./resources/OR.png" width="50%"&gt;</p>
+
+<h3>NOT（否定）</h3>
+<ul>
+<li>入力を反転（0→1、1→0）</li>
+</ul>
+<p>| A | NOT A |</p>
+<p>|---|--------|</p>
+<p>| 0 |   1    |</p>
+<p>| 1 |   0    |</p>
+
+<p>&lt;img src="./resources/NOT.png" width="50%"&gt;</p>
+
+<h3>NAND（否定論理積）</h3>
+<ul>
+<li>ANDの否定（両方1以外なら1）</li>
+</ul>
+<p>| A | B | A NAND B |</p>
+<p>|---|---|-----------|</p>
+<p>| 0 | 0 |     1     |</p>
+<p>| 0 | 1 |     1     |</p>
+<p>| 1 | 0 |     1     |</p>
+<p>| 1 | 1 |     0     |</p>
+
+<p>&lt;img src="./resources/NAND.png" width="50%"&gt;</p>
+
+<h3>NOR（否定論理和）</h3>
+<ul>
+<li>ORの否定（どちらも0のときだけ1）</li>
+</ul>
+<p>| A | B | A NOR B |</p>
+<p>|---|---|----------|</p>
+<p>| 0 | 0 |    1     |</p>
+<p>| 0 | 1 |    0     |</p>
+<p>| 1 | 0 |    0     |</p>
+<p>| 1 | 1 |    0     |</p>
+
+<p>&lt;img src="./resources/NOR.png" width="50%"&gt;</p>
+
+<h3>XOR（排他的論理和）</h3>
+<ul>
+<li>異なるときだけ1を出力</li>
+</ul>
+<p>| A | B | A XOR B |</p>
+<p>|---|---|----------|</p>
+<p>| 0 | 0 |    0     |</p>
+<p>| 0 | 1 |    1     |</p>
+<p>| 1 | 0 |    1     |</p>
+<p>| 1 | 1 |    0     |</p>
+
+<p>&lt;img src="./resources/XOR.png" width="50%"&gt;</p>
+
+<h3>半加算器・Half Adder (HA)</h3>
+<ul>
+<li>2進数1桁の加算回路</li>
+<li>単純にAとBを足すだけ</li>
+<li>Sが結果、Cは繰り上がり</li>
+</ul>
+<p>| <strong>入力</strong>   |     | <strong>出力</strong> |      |</p>
+<p>|-------|-------|---------|-------|</p>
+<p>| <strong>A</strong> | <strong>B</strong> | <strong>C</strong> | <strong>S</strong> |</p>
+<p>| 0 | 0 |  0  |   0   |</p>
+<p>| 0 | 1 |  0  |   1   |</p>
+<p>| 1 | 0 |  0  |   1   |</p>
+<p>| 1 | 1 |  1  |   0   |</p>
+
+<h3>全加算器・Full Adder (FA)</h3>
+<ul>
+<li>多くの桁の加算をするために、桁上げを考慮した回路</li>
+<li>AとBとXを足すだけ</li>
+<li>Sが結果、Cは繰り上がり</li>
+</ul>
+<p>| <strong>入力</strong> |      |     | <strong>出力</strong> |          |</p>
+<p>|------------|------| ---|------------|----------|</p>
+<p>| <strong>A</strong> | <strong>B</strong> | <strong>X</strong> | <strong>C</strong> | <strong>S</strong> |</p>
+<p>| 0 | 0  | 0  |  0  |  0   |</p>
+<p>| 0 | 1  | 0  |  0  |  1   |</p>
+<p>| 1 | 0  | 0  |  0  |  1   |</p>
+<p>| 1 | 1  | 0  |  1  |  0   |</p>
+<p>| 0 | 0  | 1  |  0  |  1   |</p>
+<p>| 0 | 1  | 1  |  1  |  0   |</p>
+<p>| 1 | 0  | 1  |  1  |  0   |</p>
+<p>| 1 | 1  | 1  |  1  |  1   |</p>
+
+
+<hr>
+<h1>10. デジタル情報の特徴</h1>
+<h2>Point</h2>
+<ul>
+<li><strong>アナログ</strong></li>
+<li>連続的・細かな表現、再現性なし</li>
+<li><strong>デジタル</strong></li>
+<li>離散的・復元・再現可能な表現、細かな表現ができない</li>
+<li>コンピューターのデジタル表現</li>
+<li>すべての情報を0と1で表現</li>
+<li><strong>2進法</strong></li>
+<li>0と1の組み合わせで数を表現</li>
+<li><strong>2進数</strong></li>
+<li>2進法で表した数値</li>
+</ul>
+<h2>ノート補足</h2>
+<ul>
+<li><strong>アナログ</strong></li>
+<li>*ノイズ*が加わると完全除去ができない</li>
+<li><strong>デジタル</strong></li>
+<li>アナログ波形をはっきりした変化に置き換えている</li>
+<li>ノイズが加わっても完全除去できる</li>
+<li>情報の品質を維持しやすい</li>
+<li>CD(デジタル媒体)はコピーを繰り返してもノイズが入らない</li>
+<li>数値化されるため、<strong>修正・編集などの加工が容易</strong></li>
+<li><strong>圧縮</strong>や、セキュリティ向上のための<strong>暗号化</strong>ができる</li>
+<li>2進法・2進数</li>
+<li>0と1で表す</li>
+<li>コンピューターでは電圧の高低で0と1を表している</li>
+<li>CDではピット・ランド(高低差)を使い、高さが変わるところを1、変わらないところを0としている</li>
+<li>情報量とその単位</li>
+<li><strong>ビット</strong></li>
+<li>最小単位</li>
+<li>2進数の1桁に相当</li>
+<li>2通りの情報を表現</li>
+<li><strong>バイト</strong></li>
+<li><strong>8ビット = 1バイト</strong></li>
+<li>単位はB(Byteの頭文字)</li>
+<li>例えば3Bの時、3バイト -&gt; 24ビットとなるので、2²⁴通りの情報を表現できる</li>
+<li>接頭辞</li>
+<li>1024B (2¹⁰B) -&gt; 1KB</li>
+<li>1024KB (2²⁰B) -&gt; 1MB</li>
+</ul>
+<hr>
+<h1>11. 数値と文字の表現</h1>
+<h2>Point</h2>
+<ul>
+<li><strong>16進数</strong></li>
+<li>*0～9に加えてA～Fの16種類*の文字で表す</li>
+<li>2進数4桁を16進数1桁で表せる</li>
+<li><strong>補数</strong></li>
+<li>整数nに整数mを足した時、桁が繰り上がる値の中で最も小さいm</li>
+<li>引き算を足し算だけで計算するための表し方</li>
+<li><strong>浮動小数点数</strong></li>
+<li>小数点の位置を動かし、コンピューター上で実数を効率よく表現するための方法</li>
+<li>一般的にIEEE754という標準規格で定められた方法で表現する</li>
+<li><strong>文字コード</strong></li>
+<li>2進数で文字を表すための規則</li>
+<li>JIS、UTF-8、EUC-JPなどの種類がある</li>
+<li>JISコードでは*英数字は1バイト*、*漢字等は2バイト*で1文字を表す</li>
+<li>別の種類の文字コードで文字を読み込むと文字化けする</li>
+</ul>
+<hr>
+<h1>13. 音の表現</h1>
+<h2>Point</h2>
+<ul>
+<li><strong>音</strong></li>
+<li><strong>周波数</strong> (単位:Hz)</li>
+<li>1秒間に含まれる波の数</li>
+<li><strong>周期</strong> (単位:秒)</li>
+<li>1個の波が伝わる時間</li>
+<li><strong>標本化</strong> (<strong>サンプリング</strong>)</li>
+<li>音波を決まった間隔(標本化周期;単位:秒)で区切り、音の振れの値を取り出す処理</li>
+<li><strong>標本化周波数</strong> (単位:Hz)</li>
+<li>標本化周期の逆数</li>
+<li>1秒間に標本化する回数</li>
+<li><strong>量子化</strong></li>
+<li>アナログ音声信号をデジタルに変換する処理</li>
+<li>波の振幅を決まった段階数で表現</li>
+<li><strong>量子化ビット数</strong></li>
+<li>量子化の段階数を決める数値</li>
+<li>一般にnビットで2ⁿ段階</li>
+<li><strong>符号化</strong></li>
+<li>量子化した値を2進数で表現する処理</li>
+<li><strong>PCM方式</strong></li>
+<li>パルス符号変調(Pulse Code Modulation)の略</li>
+<li>標本化・量子化・符号化の一連の処理のこと</li>
+</ul>
+<h2>ノート補足</h2>
+<ul>
+<li>音のデジタル化手順 (PCM方式)</li>
+<li><strong>標本化</strong>(<strong>サンプリング</strong>) (*区切る*) -&gt; <strong>量子化</strong>(*数値化*) -&gt; <strong>符号化</strong> (*2進数*)</li>
+<li>音質の比較 (ノート4⃣のまとめ)</li>
+<li>標本化周波数44100Hzで標本化するCDは1秒間に44100回標本化される</li>
+<li>標本化周期は標本化周波数の逆数なので、1÷44100=0.000023秒となる</li>
+<li>量子化ビット数は16ビットなので、段階の数は2¹⁶段階となる</li>
+<li>標本化周波数が大きいほど音質が良い</li>
+</ul>
+<hr>
+<hr>
+<h1>14. 画像の表現</h1>
+<h2>Point</h2>
+<ul>
+<li><strong>光の三原色</strong></li>
+<li>テレビ・ディスプレイなどで利用されている色の表現方法</li>
+<li><strong>赤(Red、R)、緑(Green、G)、青(Blue、B)</strong>の3つ</li>
+<li><strong>RGB</strong>とも言う</li>
+<li><strong>加法混色</strong></li>
+<li><strong>画素</strong>(ピクセル)</li>
+<li>コンピューターで画像を表現するときの最小単位</li>
+<li>*R、G、Bの3つをまとめて1つ*とする</li>
+<li><strong>解像度</strong></li>
+<li>画素の細かさ</li>
+<li><strong>階調</strong></li>
+<li>*光の明るさの段階数*</li>
+<li><strong>24ビットフルカラー</strong></li>
+<li>R、G、Bそれぞれを8ビット、1画素に24ビットを割り当てる</li>
+<li>8ビットなので2⁸=<strong>256</strong>階調である</li>
+<li><strong>16777216色</strong>を表現できる</li>
+<li>アナログ画像を一定の間隔で分割し、赤、青、緑の成分ごとに各画素の明るさ(濃淡)を取り出してデジタル化</li>
+<li><strong>ラスタ形式・ラスタグラフィックス</strong></li>
+<li>ラスタ系ソフトウェアでの画像の形式</li>
+<li>*画素の集まりで表す画像*</li>
+<li>拡大するとギザギザ(<strong>ジャギー</strong>)が見える</li>
+<li><strong>ベクタ形式・ベクタグラフィックス</strong></li>
+<li>ベクタ系ソフトウェアでの画像の形式</li>
+<li>*基準点からの座標・角度・太さなどで表す*画像</li>
+</ul>
+<h2>ノート補足</h2>
+<ul>
+<li><strong>色の三原色</strong></li>
+<li>*印刷機やプリンター*で使われる</li>
+<li><strong>シアン</strong>、<strong>マゼンタ</strong>、<strong>イエロー</strong>のインクを混ぜる</li>
+<li>混ぜると黒に近づくが完全な黒にはならないので黒インクも使う</li>
+<li><strong>減色混色</strong></li>
+<li>ファイルサイズの計算</li>
+<li>計算方法</li>
+</ul>
+<p>        1. 縦 × 横 = 画素数</p>
+<p>        2. 8nビット→nバイト</p>
+<p>        3. 画素数 × n = ファイルサイズ</p>
+<ul>
+<li>保存できる枚数</li>
+</ul>
+<p>        1. 記録用メモリの容量 ÷ ファイルサイズ = 保存できる枚数</p>
+
+<hr>
+<h1>Excelの使い方</h1>
+<ul>
+<li>四角のマスのことを<strong>セル</strong>と呼ぶ</li>
+<li>列(上部)のアルファベットと行(左端)の数字を使ってセルの場所(<strong>セル番地</strong>)を表す</li>
+<li>例: A1, B5, S30</li>
+<li><code>=</code>を使って計算を始める</li>
+<li><code>=セル番地1+セル番地2-セル番地3...</code>で四則演算</li>
+<li><code>+</code>が足し算、<code>-</code>が引き算、<code>*</code>が掛け算、<code>/</code>が割り算</li>
+<li><code>=関数名(セル番地1:セル番地2)</code>でセル番地1~2の間の全てのセルの数値を対象として各関数の計算が行われる</li>
+<li>関数の種類</li>
+<li><code>SUM</code></li>
+<li>範囲内の数値を合計</li>
+<li><code>AVERAGE</code></li>
+<li>範囲内の数値の平均を計算</li>
+<li><code>MAX</code>/<code>MIN</code></li>
+<li>範囲内の数値の最大値/最小値を表示</li>
+</ul>
+
+  </div>
+</body>
+
+</html>
