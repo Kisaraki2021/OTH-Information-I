@@ -1,552 +1,893 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html><head>
+      <title>s1-final-printout</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\yutoi\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.25\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-details{margin:0;padding:0;border:none}.markdown-preview .md-toc summary.md-toc-link-wrapper{cursor:pointer;list-style-position:outside}.markdown-preview .md-toc summary.md-toc-link-wrapper::marker{font-size:.85em}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='0']{margin-left:12px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='1']{margin-left:28px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='2']{margin-left:44px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='3']{margin-left:60px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='4']{margin-left:76px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='5']{margin-left:80px}.markdown-preview a.tag,.markdown-preview a.tag:active,.markdown-preview a.tag:link,.markdown-preview a.tag:visited,.markdown-preview span.tag{display:inline-block;background-color:var(--vscode-badge-background,rgba(127,127,127,.18));color:var(--vscode-badge-foreground,currentColor);border-radius:2em;font-size:.85em;font-weight:500;padding:.05em .55em;line-height:1.5;white-space:nowrap;text-decoration:none;text-shadow:none;box-shadow:none;transition:background-color .12s ease,opacity .12s ease}.markdown-preview a.tag{cursor:pointer}.markdown-preview a.tag:focus,.markdown-preview a.tag:hover{background-color:var(--vscode-badge-background,rgba(127,127,127,.32));color:var(--vscode-badge-foreground,currentColor);opacity:.85;text-decoration:none;outline:0}.markdown-preview .wikilink-embed-content{border-left:3px solid var(--vscode-textBlockQuote-border,rgba(128,128,128,.3));background:var(--vscode-textBlockQuote-background,rgba(128,128,128,.05));margin:.5em 0;padding:.5em .75em;border-radius:0 3px 3px 0}.markdown-preview .wikilink-embed-content.wikilink-embed-error{border-left-color:var(--vscode-errorForeground,#cf222e);color:var(--vscode-errorForeground,#cf222e);font-style:italic;opacity:.8}.markdown-preview .wikilink-embed-content h1:first-child,.markdown-preview .wikilink-embed-content h2:first-child,.markdown-preview .wikilink-embed-content h3:first-child,.markdown-preview .wikilink-embed-content h4:first-child,.markdown-preview .wikilink-embed-content h5:first-child,.markdown-preview .wikilink-embed-content h6:first-child{margin-top:.25em}.markdown-preview .wikilink-embed-content .wikilink-embed-content{margin:.25em 0;padding:.25em .5em}.markdown-preview .block-id{display:none}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-details{margin:0;padding:0;border:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='0']{padding-left:0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='1']{padding-left:16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='2']{padding-left:32px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='3']{padding-left:48px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='4']{padding-left:64px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='5']{padding-left:80px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
 
-<head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QN61849JJ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-7QN61849JJ');
-  </script>
-  <title>情報I 1学期期末考査 対策プリント</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet"
-    href="file:///c:\Users\yutoi\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.20\crossnote\dependencies\katex\katex.min.css">
-
-  <style>
-    html body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-      font-size: 16px;
-      line-height: 1.6;
-      color: #000;
-      background: #fff;
-      padding: 16px;
-      margin: 0;
-    }
-
-    html body img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    html body code {
-      font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
-      font-size: .85em;
-      color: #000;
-      background-color: #f0f0f0;
-      border-radius: 3px;
-      padding: .2em 0;
-    }
-
-    html body code::after,
-    html body code::before {
-      letter-spacing: -.2em;
-      content: '\00a0';
-    }
-
-    html body h1,
-    html body h2,
-    html body h3,
-    html body h4,
-    html body h5,
-    html body h6 {
-      font-weight: 600;
-      margin: 16px 0 12px 0;
-      page-break-after: avoid;
-    }
-
-    html body>p {
-      margin-top: 0;
-      margin-bottom: 16px;
-      word-wrap: break-word;
-    }
-
-    html body>ol,
-    html body>ul {
-      margin-bottom: 16px;
-    }
-
-    html body ol,
-    html body ul {
-      padding-left: 2em;
-    }
-
-    html body li {
-      margin-bottom: 0;
-    }
-
-    html body li>p {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-
-    html body hr {
-      height: 4px;
-      margin: 32px 0;
-      background-color: #d6d6d6;
-      border: 0 none;
-    }
-
-    html body blockquote {
-      margin: 16px 0;
-      font-size: inherit;
-      padding: 0 15px;
-      color: #5c5c5c;
-      background-color: #f0f0f0;
-      border-left: 4px solid #d6d6d6;
-    }
-
-    /* s2-final と同じ「強調はオレンジ」 */
-    html body strong {
-      color: #ff833c;
-    }
-
-    .markdown-preview {
-      width: 100%;
-      height: 100%;
-      box-sizing: border-box;
-    }
-
-    /* A4印刷向け */
-    @page {
-      size: A4;
-      margin: 12mm;
-    }
-
-    @media print {
-      html body {
-        padding: 0;
-      }
-
-      html body img {
-        display: block;
-        max-width: 100%;
-        break-inside: avoid;
-        page-break-inside: avoid;
-      }
-    }
-
-    /* 画像サイズ調整（A4でちょうどよく） */
-    html body img.license-badge {
-      width: 55mm;
-      max-width: 70%;
-    }
-
-    html body img.flowchart-symbol {
-      width: 55mm;
-      max-width: 80%;
-      margin: 6px 0 10px 0;
-    }
-
-    @media print {
-      html body img.license-badge {
-        width: 50mm;
-      }
-
-      html body img.flowchart-symbol {
-        width: 45mm;
-      }
-    }
-  </style>
-  <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function () {
-      // your code here
-    });
-  </script>
-</head>
-
-<body for="html-export">
-
-  <div class="crossnote markdown-preview">
-
-<h1>情報I 1学期期末考査 対策プリント</h1>
-
-<h1>10進数・2進数・16進数 変換表</h1>
+      </style>
+      <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="情報i-1学期期末考査-対策プリント">情報I 1学期期末考査 対策プリント </h1>
+<h1 id="10進数2進数16進数-変換表">10進数・2進数・16進数 変換表 </h1>
 <ul>
 <li>10進数・2進数・16進数の問題が出たときはこの表を書きましょう</li>
 </ul>
-<p>| 10進数 | 2進数 | 16進数 |</p>
-<p>|----|------|---|</p>
-<p>| 0  | 0000 | 0 |</p>
-<p>| 1  | 0001 | 1 |</p>
-<p>| 2  | 0010 | 2 |</p>
-<p>| 3  | 0011 | 3 |</p>
-<p>| 4  | 0100 | 4 |</p>
-<p>| 5  | 0101 | 5 |</p>
-<p>| 6  | 0110 | 6 |</p>
-<p>| 7  | 0111 | 7 |</p>
-<p>| 8  | 1000 | 8 |</p>
-<p>| 9  | 1001 | 9 |</p>
-<p>| 10 | 1010 | A |</p>
-<p>| 11 | 1011 | B |</p>
-<p>| 12 | 1100 | C |</p>
-<p>| 13 | 1101 | D |</p>
-<p>| 14 | 1110 | E |</p>
-<p>| 15 | 1111 | F |</p>
-
+<table>
+<thead>
+<tr>
+<th>10進数</th>
+<th>2進数</th>
+<th>16進数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0000</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0001</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0010</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0011</td>
+<td>3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0100</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0101</td>
+<td>5</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0110</td>
+<td>6</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0111</td>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1000</td>
+<td>8</td>
+</tr>
+<tr>
+<td>9</td>
+<td>1001</td>
+<td>9</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1010</td>
+<td>A</td>
+</tr>
+<tr>
+<td>11</td>
+<td>1011</td>
+<td>B</td>
+</tr>
+<tr>
+<td>12</td>
+<td>1100</td>
+<td>C</td>
+</tr>
+<tr>
+<td>13</td>
+<td>1101</td>
+<td>D</td>
+</tr>
+<tr>
+<td>14</td>
+<td>1110</td>
+<td>E</td>
+</tr>
+<tr>
+<td>15</td>
+<td>1111</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <hr>
-
-<h1>プリント (補数)</h1>
+<h1 id="プリント-補数">プリント (補数) </h1>
 <ul>
-<li>コンピューターで負の数を表現する場合、<strong>補数</strong>を利用する</li>
-<li>定義</li>
+<li>コンピューターで負の数を表現する場合、<strong>補数</strong>を利用する
+<ul>
+<li>定義
+<ul>
 <li>足すと1桁増える最も小さな数</li>
-<li>n進法の補数をnの補数と呼ぶ</li>
-<li>計算方法 (2進数の場合)</li>
 </ul>
-<p>        1. <code>0</code>と<code>1</code>を反転させる</p>
-<p>        2. 反転したものに1を足す</p>
+</li>
+<li>n進法の補数をnの補数と呼ぶ</li>
+<li>計算方法 (2進数の場合)
+<ol>
+<li><code>0</code>と<code>1</code>を反転させる</li>
+<li>反転したものに1を足す</li>
+</ol>
+</li>
+<li>計算例 <code>3₁₀</code>の2進数3ビット
 <ul>
-<li>計算例 <code>3₁₀</code>の2進数3ビット</li>
 <li><code>3₁₀</code> = <code>011₂</code></li>
 <li><code>011</code>の<code>0</code>と<code>1</code>を入れ替えて<code>100</code>にする</li>
 <li><code>100</code> + <code>1</code> = <code>101</code></li>
-<li>数値をコンピューターのビットで表す時、あらかじめ決められたビットの長さをビット長という</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数値をコンピューターのビットで表す時、あらかじめ決められたビットの長さをビット長という
+<ul>
 <li>その際、正負を表すために最上位の桁を符号ビットとし、<code>0</code>で正、<code>1</code>で負を表す</li>
 <li>計算の際、ビット長を超えた場合、超えた部分は消滅する</li>
+</ul>
+</li>
 <li>補数を用いたnビットの2進数で表現できる整数の範囲は <code>-2ⁿ⁻¹ ~ 2ⁿ⁻¹ - 1</code>である</li>
 </ul>
 <hr>
-<h1>プリント (実数)</h1>
+<h1 id="プリント-実数">プリント (実数) </h1>
 <ul>
-<li>10進数と2進数の変換 (小数)</li>
-<li>計算方法</li>
-</ul>
-<p>        1. 小数部分に2を掛けて繰り上がった整数を順に取り出していく</p>
-<p>        2. 小数部分が0になるまで繰り返す</p>
-<p>        3. 取り出した整数(0と1)が2進数の小数部分になる</p>
+<li>10進数と2進数の変換 (小数)
 <ul>
-<li>例 (<code>0.625₁₀</code>)</li>
-</ul>
-<p>        1. 2を掛けて整数部分を順に取り出していく</p>
+<li>計算方法
+<ol>
+<li>小数部分に2を掛けて繰り上がった整数を順に取り出していく</li>
+<li>小数部分が0になるまで繰り返す</li>
+<li>取り出した整数(0と1)が2進数の小数部分になる</li>
+</ol>
+</li>
+<li>例 (<code>0.625₁₀</code>)
+<ol>
+<li>2を掛けて整数部分を順に取り出していく
 <ul>
 <li><code>0.625</code> × <code>2</code> = <code>1.25</code>　→ 整数部分 <code>1</code></li>
 <li><code>0.25</code> × <code>2</code> = <code>0.5</code>　 → 整数部分 <code>0</code></li>
 <li><code>0.5</code> × <code>2</code> = <code>1.</code>　 → 整数部分 <code>1</code></li>
 </ul>
-<p>        2. ここで小数部分が<code>0</code>になったので終了</p>
-<p>        3. 答えは<code>0.101₂</code></p>
+</li>
+<li>ここで小数部分が<code>0</code>になったので終了</li>
+<li>答えは<code>0.101₂</code></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>実数の表現
 <ul>
-<li>実数の表現</li>
-<li><strong>固定小数点数</strong></li>
+<li><strong>固定小数点数</strong>
+<ul>
 <li>小数点の位置を固定</li>
-<li><strong>浮動小数点数</strong></li>
+</ul>
+</li>
+<li><strong>浮動小数点数</strong>
+<ul>
 <li>小数点の位置が移動</li>
 <li>コンピューターではこちらを使う</li>
 <li><strong>IEEE754</strong>という規格が定められている</li>
-<li>浮動小数点数の計算 (IEEE754)</li>
+</ul>
+</li>
+<li>浮動小数点数の計算 (IEEE754)
+<ul>
 <li><strong>符号部</strong> S : 符号(+, -)を表す</li>
 <li><strong>指数部</strong> E : 小数点の位置を表す</li>
 <li><strong>仮数部</strong> M : 実際の数字を表す</li>
-<li><strong>(-1)&lt;sup&gt;s&lt;/sup&gt; × 1.M × 2&lt;sup&gt;E-127&lt;/sup&gt;</strong></li>
-<li>実際の計算</li>
-</ul>
-<p>            1. 与えられた10進数を2進数に変換</p>
-<p>            2. 上の浮動小数点数の式の形に変形 (この作業を<strong>正規化</strong>と呼ぶ)</p>
+<li><strong>(-1)<sup>s</sup> × 1.M × 2<sup>E-127</sup></strong></li>
+<li>実際の計算
+<ol>
+<li>与えられた10進数を2進数に変換</li>
+<li>上の浮動小数点数の式の形に変形 (この作業を<strong>正規化</strong>と呼ぶ)
 <ul>
 <li>この時、指数部はE-127の形にすることに注意</li>
 </ul>
-<p>            3. Eを2進数に変換</p>
-<p>            4. S(1桁)、E(8桁)、M(23桁)を順に下の表に書く</p>
+</li>
+<li>Eを2進数に変換</li>
+<li>S(1桁)、E(8桁)、M(23桁)を順に下の表に書く
 <ul>
 <li>Mは左詰めにし、余ったところは0を書く</li>
 </ul>
-<p>!<a href="resources/bit_table.png">alt text</a></p>
-
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="resources/bit_table.png" alt="alt text"></p>
 <hr>
-<h1>プリント (論理回路)</h1>
+<h1 id="プリント-論理回路">プリント (論理回路) </h1>
 <ul>
 <li>コンピューターは0と1の2種類の信号で処理をする</li>
-<li>その演算や制御をする回路を<strong>論理回路</strong>という</li>
+<li>その演算や制御をする回路を<strong>論理回路</strong>という
+<ul>
 <li><strong>論理積(AND)回路</strong></li>
 <li><strong>論理積(OR)回路</strong></li>
-<li><strong>否定(NOT)回路</strong></li>
+<li><strong>否定(NOT)回路</strong><br>
+で全ての回路を表現できる</li>
 </ul>
-<p>    で全ての回路を表現できる</p>
-<ul>
+</li>
 <li>論理回路の入力と出力の関係表を<strong>真理値表</strong>という</li>
 </ul>
-<h3>AND（論理積）</h3>
+<h3 id="and論理積">AND（論理積） </h3>
 <ul>
 <li>両方が1のときだけ1を出力</li>
 </ul>
-<p>| A | B | A AND B |</p>
-<p>|---|---|----------|</p>
-<p>| 0 | 0 |    0     |</p>
-<p>| 0 | 1 |    0     |</p>
-<p>| 1 | 0 |    0     |</p>
-<p>| 1 | 1 |    1     |</p>
-
-<p>&lt;img src="./resources/AND.png" width="50%"&gt;</p>
-
-<h3>OR（論理和）</h3>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A AND B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<img src="./resources/AND.png" width="50%">
+<h3 id="or論理和">OR（論理和） </h3>
 <ul>
 <li>片方でも1なら1を出力</li>
 </ul>
-<p>| A | B | A OR B |</p>
-<p>|---|---|---------|</p>
-<p>| 0 | 0 |   0     |</p>
-<p>| 0 | 1 |   1     |</p>
-<p>| 1 | 0 |   1     |</p>
-<p>| 1 | 1 |   1     |</p>
-
-<p>&lt;img src="./resources/OR.png" width="50%"&gt;</p>
-
-<h3>NOT（否定）</h3>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A OR B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<img src="./resources/OR.png" width="50%">
+<h3 id="not否定">NOT（否定） </h3>
 <ul>
 <li>入力を反転（0→1、1→0）</li>
 </ul>
-<p>| A | NOT A |</p>
-<p>|---|--------|</p>
-<p>| 0 |   1    |</p>
-<p>| 1 |   0    |</p>
-
-<p>&lt;img src="./resources/NOT.png" width="50%"&gt;</p>
-
-<h3>NAND（否定論理積）</h3>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>NOT A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<img src="./resources/NOT.png" width="50%">
+<h3 id="nand否定論理積">NAND（否定論理積） </h3>
 <ul>
 <li>ANDの否定（両方1以外なら1）</li>
 </ul>
-<p>| A | B | A NAND B |</p>
-<p>|---|---|-----------|</p>
-<p>| 0 | 0 |     1     |</p>
-<p>| 0 | 1 |     1     |</p>
-<p>| 1 | 0 |     1     |</p>
-<p>| 1 | 1 |     0     |</p>
-
-<p>&lt;img src="./resources/NAND.png" width="50%"&gt;</p>
-
-<h3>NOR（否定論理和）</h3>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A NAND B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<img src="./resources/NAND.png" width="50%">
+<h3 id="nor否定論理和">NOR（否定論理和） </h3>
 <ul>
 <li>ORの否定（どちらも0のときだけ1）</li>
 </ul>
-<p>| A | B | A NOR B |</p>
-<p>|---|---|----------|</p>
-<p>| 0 | 0 |    1     |</p>
-<p>| 0 | 1 |    0     |</p>
-<p>| 1 | 0 |    0     |</p>
-<p>| 1 | 1 |    0     |</p>
-
-<p>&lt;img src="./resources/NOR.png" width="50%"&gt;</p>
-
-<h3>XOR（排他的論理和）</h3>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A NOR B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<img src="./resources/NOR.png" width="50%">
+<h3 id="xor排他的論理和">XOR（排他的論理和） </h3>
 <ul>
 <li>異なるときだけ1を出力</li>
 </ul>
-<p>| A | B | A XOR B |</p>
-<p>|---|---|----------|</p>
-<p>| 0 | 0 |    0     |</p>
-<p>| 0 | 1 |    1     |</p>
-<p>| 1 | 0 |    1     |</p>
-<p>| 1 | 1 |    0     |</p>
-
-<p>&lt;img src="./resources/XOR.png" width="50%"&gt;</p>
-
-<h3>半加算器・Half Adder (HA)</h3>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A XOR B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<img src="./resources/XOR.png" width="50%">
+<h3 id="半加算器half-adder-ha">半加算器・Half Adder (HA) </h3>
 <ul>
 <li>2進数1桁の加算回路</li>
 <li>単純にAとBを足すだけ</li>
 <li>Sが結果、Cは繰り上がり</li>
 </ul>
-<p>| <strong>入力</strong>   |     | <strong>出力</strong> |      |</p>
-<p>|-------|-------|---------|-------|</p>
-<p>| <strong>A</strong> | <strong>B</strong> | <strong>C</strong> | <strong>S</strong> |</p>
-<p>| 0 | 0 |  0  |   0   |</p>
-<p>| 0 | 1 |  0  |   1   |</p>
-<p>| 1 | 0 |  0  |   1   |</p>
-<p>| 1 | 1 |  1  |   0   |</p>
-
-<h3>全加算器・Full Adder (FA)</h3>
+<table>
+<thead>
+<tr>
+<th><strong>入力</strong></th>
+<th></th>
+<th><strong>出力</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td><strong>B</strong></td>
+<td><strong>C</strong></td>
+<td><strong>S</strong></td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="全加算器full-adder-fa">全加算器・Full Adder (FA) </h3>
 <ul>
 <li>多くの桁の加算をするために、桁上げを考慮した回路</li>
 <li>AとBとXを足すだけ</li>
 <li>Sが結果、Cは繰り上がり</li>
 </ul>
-<p>| <strong>入力</strong> |      |     | <strong>出力</strong> |          |</p>
-<p>|------------|------| ---|------------|----------|</p>
-<p>| <strong>A</strong> | <strong>B</strong> | <strong>X</strong> | <strong>C</strong> | <strong>S</strong> |</p>
-<p>| 0 | 0  | 0  |  0  |  0   |</p>
-<p>| 0 | 1  | 0  |  0  |  1   |</p>
-<p>| 1 | 0  | 0  |  0  |  1   |</p>
-<p>| 1 | 1  | 0  |  1  |  0   |</p>
-<p>| 0 | 0  | 1  |  0  |  1   |</p>
-<p>| 0 | 1  | 1  |  1  |  0   |</p>
-<p>| 1 | 0  | 1  |  1  |  0   |</p>
-<p>| 1 | 1  | 1  |  1  |  1   |</p>
-
-
+<table>
+<thead>
+<tr>
+<th><strong>入力</strong></th>
+<th></th>
+<th></th>
+<th><strong>出力</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td><strong>B</strong></td>
+<td><strong>X</strong></td>
+<td><strong>C</strong></td>
+<td><strong>S</strong></td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
 <hr>
-<h1>10. デジタル情報の特徴</h1>
-<h2>Point</h2>
+<h1 id="10-デジタル情報の特徴">10. デジタル情報の特徴 </h1>
+<h2 id="point">Point </h2>
 <ul>
-<li><strong>アナログ</strong></li>
+<li><strong>アナログ</strong>
+<ul>
 <li>連続的・細かな表現、再現性なし</li>
-<li><strong>デジタル</strong></li>
+</ul>
+</li>
+<li><strong>デジタル</strong>
+<ul>
 <li>離散的・復元・再現可能な表現、細かな表現ができない</li>
-<li>コンピューターのデジタル表現</li>
+</ul>
+</li>
+<li>コンピューターのデジタル表現
+<ul>
 <li>すべての情報を0と1で表現</li>
-<li><strong>2進法</strong></li>
+<li><strong>2進法</strong>
+<ul>
 <li>0と1の組み合わせで数を表現</li>
-<li><strong>2進数</strong></li>
+</ul>
+</li>
+<li><strong>2進数</strong>
+<ul>
 <li>2進法で表した数値</li>
 </ul>
-<h2>ノート補足</h2>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="ノート補足">ノート補足 </h2>
 <ul>
-<li><strong>アナログ</strong></li>
-<li>*ノイズ*が加わると完全除去ができない</li>
-<li><strong>デジタル</strong></li>
+<li>
+<p><strong>アナログ</strong></p>
+<ul>
+<li><em>ノイズ</em>が加わると完全除去ができない</li>
+</ul>
+</li>
+<li>
+<p><strong>デジタル</strong></p>
+<ul>
 <li>アナログ波形をはっきりした変化に置き換えている</li>
 <li>ノイズが加わっても完全除去できる</li>
-<li>情報の品質を維持しやすい</li>
+<li>情報の品質を維持しやすい
+<ul>
 <li>CD(デジタル媒体)はコピーを繰り返してもノイズが入らない</li>
+</ul>
+</li>
 <li>数値化されるため、<strong>修正・編集などの加工が容易</strong></li>
 <li><strong>圧縮</strong>や、セキュリティ向上のための<strong>暗号化</strong>ができる</li>
-<li>2進法・2進数</li>
+</ul>
+</li>
+<li>
+<p>2進法・2進数</p>
+<ul>
 <li>0と1で表す</li>
 <li>コンピューターでは電圧の高低で0と1を表している</li>
 <li>CDではピット・ランド(高低差)を使い、高さが変わるところを1、変わらないところを0としている</li>
-<li>情報量とその単位</li>
-<li><strong>ビット</strong></li>
+</ul>
+</li>
+<li>
+<p>情報量とその単位</p>
+<ul>
+<li><strong>ビット</strong>
+<ul>
 <li>最小単位</li>
 <li>2進数の1桁に相当</li>
 <li>2通りの情報を表現</li>
-<li><strong>バイト</strong></li>
+</ul>
+</li>
+<li><strong>バイト</strong>
+<ul>
 <li><strong>8ビット = 1バイト</strong></li>
 <li>単位はB(Byteの頭文字)</li>
 <li>例えば3Bの時、3バイト -&gt; 24ビットとなるので、2²⁴通りの情報を表現できる</li>
-<li>接頭辞</li>
+</ul>
+</li>
+<li>接頭辞
+<ul>
 <li>1024B (2¹⁰B) -&gt; 1KB</li>
 <li>1024KB (2²⁰B) -&gt; 1MB</li>
 </ul>
-<hr>
-<h1>11. 数値と文字の表現</h1>
-<h2>Point</h2>
-<ul>
-<li><strong>16進数</strong></li>
-<li>*0～9に加えてA～Fの16種類*の文字で表す</li>
-<li>2進数4桁を16進数1桁で表せる</li>
-<li><strong>補数</strong></li>
-<li>整数nに整数mを足した時、桁が繰り上がる値の中で最も小さいm</li>
-<li>引き算を足し算だけで計算するための表し方</li>
-<li><strong>浮動小数点数</strong></li>
-<li>小数点の位置を動かし、コンピューター上で実数を効率よく表現するための方法</li>
-<li>一般的にIEEE754という標準規格で定められた方法で表現する</li>
-<li><strong>文字コード</strong></li>
-<li>2進数で文字を表すための規則</li>
-<li>JIS、UTF-8、EUC-JPなどの種類がある</li>
-<li>JISコードでは*英数字は1バイト*、*漢字等は2バイト*で1文字を表す</li>
-<li>別の種類の文字コードで文字を読み込むと文字化けする</li>
+</li>
+</ul>
+</li>
 </ul>
 <hr>
-<h1>13. 音の表現</h1>
-<h2>Point</h2>
+<h1 id="11-数値と文字の表現">11. 数値と文字の表現 </h1>
+<h2 id="point-1">Point </h2>
 <ul>
-<li><strong>音</strong></li>
-<li><strong>周波数</strong> (単位:Hz)</li>
+<li><strong>16進数</strong>
+<ul>
+<li><em>0～9に加えてA～Fの16種類</em>の文字で表す</li>
+<li>2進数4桁を16進数1桁で表せる</li>
+</ul>
+</li>
+<li><strong>補数</strong>
+<ul>
+<li>整数nに整数mを足した時、桁が繰り上がる値の中で最も小さいm</li>
+<li>引き算を足し算だけで計算するための表し方</li>
+</ul>
+</li>
+<li><strong>浮動小数点数</strong>
+<ul>
+<li>小数点の位置を動かし、コンピューター上で実数を効率よく表現するための方法</li>
+<li>一般的にIEEE754という標準規格で定められた方法で表現する</li>
+</ul>
+</li>
+<li><strong>文字コード</strong>
+<ul>
+<li>2進数で文字を表すための規則</li>
+<li>JIS、UTF-8、EUC-JPなどの種類がある</li>
+<li>JISコードでは<em>英数字は1バイト</em>、<em>漢字等は2バイト</em>で1文字を表す</li>
+<li>別の種類の文字コードで文字を読み込むと文字化けする</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="13-音の表現">13. 音の表現 </h1>
+<h2 id="point-2">Point </h2>
+<ul>
+<li><strong>音</strong>
+<ul>
+<li><strong>周波数</strong> (単位:Hz)
+<ul>
 <li>1秒間に含まれる波の数</li>
-<li><strong>周期</strong> (単位:秒)</li>
+</ul>
+</li>
+<li><strong>周期</strong> (単位:秒)
+<ul>
 <li>1個の波が伝わる時間</li>
-<li><strong>標本化</strong> (<strong>サンプリング</strong>)</li>
-<li>音波を決まった間隔(標本化周期;単位:秒)で区切り、音の振れの値を取り出す処理</li>
-<li><strong>標本化周波数</strong> (単位:Hz)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>標本化</strong> (<strong>サンプリング</strong>)<br>
+- 音波を決まった間隔(標本化周期;単位:秒)で区切り、音の振れの値を取り出す処理
+<ul>
+<li><strong>標本化周波数</strong> (単位:Hz)
+<ul>
 <li>標本化周期の逆数</li>
 <li>1秒間に標本化する回数</li>
-<li><strong>量子化</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>量子化</strong>
+<ul>
 <li>アナログ音声信号をデジタルに変換する処理</li>
 <li>波の振幅を決まった段階数で表現</li>
-<li><strong>量子化ビット数</strong></li>
+</ul>
+</li>
+<li><strong>量子化ビット数</strong>
+<ul>
 <li>量子化の段階数を決める数値</li>
 <li>一般にnビットで2ⁿ段階</li>
-<li><strong>符号化</strong></li>
+</ul>
+</li>
+<li><strong>符号化</strong>
+<ul>
 <li>量子化した値を2進数で表現する処理</li>
-<li><strong>PCM方式</strong></li>
+</ul>
+</li>
+<li><strong>PCM方式</strong>
+<ul>
 <li>パルス符号変調(Pulse Code Modulation)の略</li>
 <li>標本化・量子化・符号化の一連の処理のこと</li>
 </ul>
-<h2>ノート補足</h2>
+</li>
+</ul>
+<h2 id="ノート補足-1">ノート補足 </h2>
 <ul>
-<li>音のデジタル化手順 (PCM方式)</li>
-<li><strong>標本化</strong>(<strong>サンプリング</strong>) (*区切る*) -&gt; <strong>量子化</strong>(*数値化*) -&gt; <strong>符号化</strong> (*2進数*)</li>
-<li>音質の比較 (ノート4⃣のまとめ)</li>
+<li>音のデジタル化手順 (PCM方式)
+<ul>
+<li><strong>標本化</strong>(<strong>サンプリング</strong>) (<em>区切る</em>) -&gt; <strong>量子化</strong>(<em>数値化</em>) -&gt; <strong>符号化</strong> (<em>2進数</em>)</li>
+</ul>
+</li>
+<li>音質の比較 (ノート4⃣のまとめ)
+<ul>
 <li>標本化周波数44100Hzで標本化するCDは1秒間に44100回標本化される</li>
 <li>標本化周期は標本化周波数の逆数なので、1÷44100=0.000023秒となる</li>
 <li>量子化ビット数は16ビットなので、段階の数は2¹⁶段階となる</li>
 <li>標本化周波数が大きいほど音質が良い</li>
 </ul>
+</li>
+</ul>
 <hr>
 <hr>
-<h1>14. 画像の表現</h1>
-<h2>Point</h2>
+<h1 id="14-画像の表現">14. 画像の表現 </h1>
+<h2 id="point-3">Point </h2>
 <ul>
-<li><strong>光の三原色</strong></li>
+<li><strong>光の三原色</strong>
+<ul>
 <li>テレビ・ディスプレイなどで利用されている色の表現方法</li>
-<li><strong>赤(Red、R)、緑(Green、G)、青(Blue、B)</strong>の3つ</li>
+<li>**赤(Red、R)、緑(Green、G)、青(Blue、B)**の3つ
+<ul>
 <li><strong>RGB</strong>とも言う</li>
+</ul>
+</li>
 <li><strong>加法混色</strong></li>
-<li><strong>画素</strong>(ピクセル)</li>
+</ul>
+</li>
+<li><strong>画素</strong>(ピクセル)
+<ul>
 <li>コンピューターで画像を表現するときの最小単位</li>
-<li>*R、G、Bの3つをまとめて1つ*とする</li>
-<li><strong>解像度</strong></li>
+<li><em>R、G、Bの3つをまとめて1つ</em>とする</li>
+</ul>
+</li>
+<li><strong>解像度</strong>
+<ul>
 <li>画素の細かさ</li>
-<li><strong>階調</strong></li>
-<li>*光の明るさの段階数*</li>
-<li><strong>24ビットフルカラー</strong></li>
+</ul>
+</li>
+<li><strong>階調</strong>
+<ul>
+<li><em>光の明るさの段階数</em></li>
+<li><strong>24ビットフルカラー</strong>
+<ul>
 <li>R、G、Bそれぞれを8ビット、1画素に24ビットを割り当てる</li>
 <li>8ビットなので2⁸=<strong>256</strong>階調である</li>
 <li><strong>16777216色</strong>を表現できる</li>
-<li>アナログ画像を一定の間隔で分割し、赤、青、緑の成分ごとに各画素の明るさ(濃淡)を取り出してデジタル化</li>
-<li><strong>ラスタ形式・ラスタグラフィックス</strong></li>
-<li>ラスタ系ソフトウェアでの画像の形式</li>
-<li>*画素の集まりで表す画像*</li>
-<li>拡大するとギザギザ(<strong>ジャギー</strong>)が見える</li>
-<li><strong>ベクタ形式・ベクタグラフィックス</strong></li>
-<li>ベクタ系ソフトウェアでの画像の形式</li>
-<li>*基準点からの座標・角度・太さなどで表す*画像</li>
 </ul>
-<h2>ノート補足</h2>
+</li>
+</ul>
+</li>
+<li>アナログ画像を一定の間隔で分割し、赤、青、緑の成分ごとに各画素の明るさ(濃淡)を取り出してデジタル化</li>
+<li><strong>ラスタ形式・ラスタグラフィックス</strong>
 <ul>
-<li><strong>色の三原色</strong></li>
-<li>*印刷機やプリンター*で使われる</li>
+<li>ラスタ系ソフトウェアでの画像の形式</li>
+<li><em>画素の集まりで表す画像</em></li>
+<li>拡大するとギザギザ(<strong>ジャギー</strong>)が見える</li>
+</ul>
+</li>
+<li><strong>ベクタ形式・ベクタグラフィックス</strong>
+<ul>
+<li>ベクタ系ソフトウェアでの画像の形式</li>
+<li><em>基準点からの座標・角度・太さなどで表す</em>画像</li>
+</ul>
+</li>
+</ul>
+<h2 id="ノート補足-2">ノート補足 </h2>
+<ul>
+<li><strong>色の三原色</strong>
+<ul>
+<li><em>印刷機やプリンター</em>で使われる</li>
 <li><strong>シアン</strong>、<strong>マゼンタ</strong>、<strong>イエロー</strong>のインクを混ぜる</li>
 <li>混ぜると黒に近づくが完全な黒にはならないので黒インクも使う</li>
 <li><strong>減色混色</strong></li>
-<li>ファイルサイズの計算</li>
-<li>計算方法</li>
 </ul>
-<p>        1. 縦 × 横 = 画素数</p>
-<p>        2. 8nビット→nバイト</p>
-<p>        3. 画素数 × n = ファイルサイズ</p>
+</li>
+<li>ファイルサイズの計算
 <ul>
-<li>保存できる枚数</li>
+<li>計算方法
+<ol>
+<li>縦 × 横 = 画素数</li>
+<li>8nビット→nバイト</li>
+<li>画素数 × n = ファイルサイズ</li>
+</ol>
+</li>
+<li>保存できる枚数
+<ol>
+<li>記録用メモリの容量 ÷ ファイルサイズ = 保存できる枚数</li>
+</ol>
+</li>
 </ul>
-<p>        1. 記録用メモリの容量 ÷ ファイルサイズ = 保存できる枚数</p>
-
+</li>
+</ul>
 <hr>
-<h1>Excelの使い方</h1>
+<h1 id="excelの使い方">Excelの使い方 </h1>
 <ul>
 <li>四角のマスのことを<strong>セル</strong>と呼ぶ</li>
-<li>列(上部)のアルファベットと行(左端)の数字を使ってセルの場所(<strong>セル番地</strong>)を表す</li>
+<li>列(上部)のアルファベットと行(左端)の数字を使ってセルの場所(<strong>セル番地</strong>)を表す
+<ul>
 <li>例: A1, B5, S30</li>
+</ul>
+</li>
 <li><code>=</code>を使って計算を始める</li>
-<li><code>=セル番地1+セル番地2-セル番地3...</code>で四則演算</li>
+<li><code>=セル番地1+セル番地2-セル番地3...</code>で四則演算
+<ul>
 <li><code>+</code>が足し算、<code>-</code>が引き算、<code>*</code>が掛け算、<code>/</code>が割り算</li>
-<li><code>=関数名(セル番地1:セル番地2)</code>でセル番地1~2の間の全てのセルの数値を対象として各関数の計算が行われる</li>
-<li>関数の種類</li>
-<li><code>SUM</code></li>
+</ul>
+</li>
+<li><code>=関数名(セル番地1:セル番地2)</code>でセル番地1~2の間の全てのセルの数値を対象として各関数の計算が行われる
+<ul>
+<li>関数の種類
+<ul>
+<li><code>SUM</code>
+<ul>
 <li>範囲内の数値を合計</li>
-<li><code>AVERAGE</code></li>
+</ul>
+</li>
+<li><code>AVERAGE</code>
+<ul>
 <li>範囲内の数値の平均を計算</li>
-<li><code>MAX</code>/<code>MIN</code></li>
+</ul>
+</li>
+<li><code>MAX</code>/<code>MIN</code>
+<ul>
 <li>範囲内の数値の最大値/最小値を表示</li>
 </ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
-  </div>
-</body>
-
-</html>
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
